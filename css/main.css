@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/*메인 슬라이드*/
+#slide {width: 100%; height: auto; margin: 0 auto; background-color: rgb(113,113,213);}
+#slide #slide_wrap {width: 1100px; height: 340px; margin: 0 auto; position: relative; overflow: hidden;}
+#slide #slide_wrap .event_sd li {width: 1100px; height: 340px;}
+#slide #slide_wrap .event_sd li img {width: 100%; height: 100%;}
+
+/*메인 슬라이드 tap*/
+#tap_menu_wrap {width: 100%; height: 45px; border-top: 1.5px solid #ddd; border-bottom: 1.5px solid #ddd; position: relative;}
+#tap_menu_wrap #tap {width: 1100px; margin: 0 auto;}
+
+#tap_menu_wrap #tap .tap_list {width: 100%;}
+#tap_menu_wrap #tap .tap_list li {width: 25%; line-height: 42px; float: left; font-size: 17px; text-align: center; cursor: pointer; border-right: 1px solid #ddd; color: #666; position: relative; z-index: 1;}
+#tap_menu_wrap #tap .tap_list li:first-child {border-left: 1px solid #ddd;}
+
+/*서브 슬라이드*/
+#subslide {width: 1100px; height: 150px; margin: 10px auto; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1;}
+#subslide .subbn_wrap {width: 360px; height: 150px; position: relative; overflow: hidden;}
+#subslide .sub_sd {width: 1080px;}
+#subslide .sub_sd li {width: 360px; height: 150px; float: left;}
+#subslide .sub_sd li img {width: 100%; height: 100%;}
+
+#subslide p {position:absolute; bottom: -1px; right: 40px; display:block;color:#999; font-size: 15px; font-weight: 300; line-height: 24px; letter-spacing: 1px;}
+
+#subslide span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+#subslide span:hover {background-color: #eee;}
+
+#subslide .prev {bottom: 0; right: 18px; text-align: left;}
+#subslide .next {bottom: 0; right: 0; text-align: right;}
+
+/*section start*/
+section {width: 100%; height: auto; margin: 0 auto;}
+
+
+#sidepop_wrap {width: 1400px; height: auto; position: relative; left: 50%; transform: translateX(-51%); display: flex; justify-content: space-between; align-items: flex-start;}
+
+/*왼쪽 popup*/
+#sidepop_wrap #left_pop {width: 140px; height: auto; position: absolute; top: -510px;}
+
+#sidepop_wrap #left_pop #left_bn {width: 140px; height: 290px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+#sidepop_wrap #left_pop #left_bn img {width: 100%; height: auto;}
+#sidepop_wrap #left_pop .left_bn_txt {width: 140px; height: 80px; background-color: #eee; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+#sidepop_wrap #left_pop .left_bn_txt h3 {width: 120px; line-height: 30px; margin-bottom: 8px; background-color: #fff; font-size: 14px; font-weight: 400; text-align: center; color: #555; cursor: pointer;}
+
+#sidepop_wrap #left_pop .pennav {width: 100%; height: auto; border: 1px solid #ddd; background-color: #fff;}
+#sidepop_wrap #left_pop .pennav li {border-top: 1px solid #ddd; font-size: 14px; color: #666; line-height: 26px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding-left: 10px;}
+#sidepop_wrap #left_pop .pennav li:first-child {border-top: none; background-color: #eee;}
+#sidepop_wrap #left_pop .pennav li button {border: none; background-color: #fff; color: #999;}
+
+#sidepop_wrap #left_pop .left_sns {line-height: 14px; margin-top: 8px;}
+
+/*오른쪽 popup*/
+#sidepop_wrap #right_pop {width: 110px; height: 780px; position: absolute; top: 62px; right: 0; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;}
+#sidepop_wrap #right_pop .right_bn {width: 110px; height: 160px; border: 1px solid #ddd; background-color: #fff;}
+#sidepop_wrap #right_pop .right_bn img {width: 100%; height: 100%;}
+#sidepop_wrap #right_pop i {color: #999;}
+#sidepop_wrap #right_pop p {font-size: 10px; color: #666;}
+#sidepop_wrap #right_pop h5 {font-size: 12px; font-weight: 400; color: #666;}
+
+#sidepop_wrap #right_pop .btn_rtp {width: 100%; border: none; border: 1px solid #ddd; background-color: #eee; font-size: 14px; font-weight: 500; color: #555; cursor: pointer; display: flex; justify-content: space-between; align-items: center; line-height: 26px;}
+
+#sidepop_wrap #right_pop .products {width: 100%; border: none; border: 1px solid #ddd; font-size: 14px; font-weight: 500; color: #555; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; align-items: center; line-height: 26px; }
+#sidepop_wrap #right_pop .products .view_pd {width: 90px; height: 110px; border: 1px solid #ddd; margin-bottom: 6px;}
+#sidepop_wrap #right_pop .products .view_pd img {width: 100%; height: 100%;}
+
+#sidepop_wrap #right_pop .products .btn_list {width: 100%; border: none; border-top: 1px solid #ddd; background-color: #fff; font-size: 14px; color: #666; height: 28px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; cursor: pointer;}
+
+/*오늘의 책*/
+section #today_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 20px 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-end;}
+section #today_wrap h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 0 1% 0;}
+
+section #today_wrap .today_l {width: 670px; height: 360px; margin: 0; position: relative; overflow: hidden; border:1px solid #ddd; border-right: none;}
+section #today_wrap .today_l .todaybox {width: 1340px;}
+section #today_wrap .today_l .todaybox li {width: 670px; height: 360px; float: left;}
+
+/*에디터추천*/
+section #today_wrap .today_l .edite {width: 670px; height: 360px; margin: 0; padding: 40px 60px; position: relative; display: flex; flex-flow: column wrap; justify-content: center; align-items: flex-start;}
+section #today_wrap .today_l .edite .totag {position: absolute; top: 0; right: 20px; width: 55px; height: 55px;}
+section #today_wrap .today_l .edite .totag img {width: 100%; height: 100%;}
+
+section #today_wrap .today_l .edite  img {width: 170px; height: 260px; margin-right: 20px;}   
+section #today_wrap .today_l .edite h3 {color:#333; font-size:22px; font-weight: 400; cursor: pointer;}
+section #today_wrap .today_l .edite h3:hover {text-decoration: underline;}
+section #today_wrap .today_l .edite h5 {color:#666; font-size:16px; font-weight: 400; line-height: 50px;}
+section #today_wrap .today_l .edite p {width: 360px; font-size:14px; color:#666; font-weight: 300; line-height: 160%}
+
+/*MD 추천*/
+section #today_wrap .today_l .md {width: 670px; height: 360px; margin: 0; padding: 40px 60px; position: relative;}
+section #today_wrap .today_l .md .totag {position: absolute; top: 0; right: 20px; width: 55px; height: 55px;}
+section #today_wrap .today_l .md .totag img {width: 100%; height: 100%;}
+
+section #today_wrap .today_l .md .md_sub {display: flex; justify-content: space-between; align-items: center;}   
+section #today_wrap .today_l .md .mdbook {width: 260px; height: 260px; display: flex; flex-direction: column; justify-content: flex-start; align-content: center; text-align: center}
+section #today_wrap .today_l .md .mdbook img {width: 130px; height: 180px; margin: 0 auto;}
+section #today_wrap .today_l .md .mdbook h3 {color:#333; font-size:18px; font-weight: 400; line-height: 40px; cursor: pointer;}
+section #today_wrap .today_l .md .mdbook h3:hover {text-decoration: underline;}
+section #today_wrap .today_l .md .mdbook p {color:#666; font-size:12px; font-weight: 400; text-align: justify;}
+
+section #today_wrap .today_l span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #today_wrap .today_l span:hover {color: #947555;}
+
+section #today_wrap .today_l .prev {left: 0;}
+section #today_wrap .today_l .next {right: 0;}
+
+/*세일 기프트*/
+section #today_wrap #today_r {width: 430px; height: 360px; margin: 0; position: relative; overflow: hidden; border:1px solid #ddd;}
+section #today_wrap #today_r #giftbox {width: 1290px;}
+section #today_wrap #today_r #giftbox li {width: 430px; height: 360px; float: left; display: flex; justify-content: center; align-items: center;}   
+section #today_wrap #today_r #giftbox .giftimg img {width: auto; height: 360px;}   
+
+section #today_wrap #today_r span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #today_wrap #today_r span:hover {color: #947555;}
+
+section #today_wrap #today_r .prev {left: 0;}
+section #today_wrap #today_r .next {right: 0;}
+
+/*기대신간*/
+section #new_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 40px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start;}
+section #new_wrap h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 20px 1% 0;}
+section #new_wrap #new_list {width: 90%; line-height: 16px;}
+section #new_wrap #new_list > li {float: left; margin: 11px 8px 0 0; font-weight: 300; color: #666; border-right: 1px solid #ddd; color: #666; padding-right: 8px;	cursor: pointer;}
+section #new_wrap #new_list > li:last-of-type {border: none;}
+section #new_wrap #new_list > li:first-of-type {color: #4169E1;}
+
+section #new_book {width: 1100px; height: 360px; margin:0; border:1px solid #ddd; position: relative; overflow: hidden;}
+
+section #new_book .new_wrap {width: 1100px; height: 360px; position: relative;}
+section #new_book .new_wrap:not(:first-of-type) {position: absolute; top:0; left: 0; display: none;}
+section #new_book .new_slide1,.new_slide2,.new_slide3,.new_slide4,.new_slide5,.new_slide6 {width: 2200px; height: 360px; display: flex;}
+
+section #new_book .new_box1,.new_box2,.new_box3,.new_box4,.new_box5,.new_box6 {width: 1100px; height: 360px; margin: 0; padding: 25px 60px; display: flex; justify-content: space-between; align-items: center;}
+
+section #new_book .nbox {width: 170px; height: 310px; margin:0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+section #new_book .nbox img {width: 170px; height: 236px; border: 1px solid #ddd;}
+section #new_book .nbox h3 {margin-top: 10px; font-size: 14px; font-weight: 500; color: #333; line-height: 130%;}
+section #new_book .nbox p {font-size: 12.5px; font-weight: 300; color: #666;}
+
+/*기대신간 좌우버튼 */
+section #new_book span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #new_book span:hover {color: #947555;}
+section #new_book .prev {left: 0;}
+section #new_book .next {right: 0;}
+
+/*이슈&북*/
+section #issue_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 60px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start;}
+section #issue_wrap h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 20px 1% 0;}
+section #issue_wrap h2 {width: 90%; line-height: 38px; font-size: 16px; font-weight: 400; color: #947555; letter-spacing: 1px;}
+
+section #issuebox_wrap {width: 1100px; height: 360px; margin:0; border:1px solid #ddd; position: relative; overflow: hidden;}
+
+section #issuebox_wrap .issue_slide {width: 3300px; height: 360px;}
+
+section #issuebox_wrap .issuebox {width: 1100px; height: 360px; margin: 0; padding: 25px 60px; float: left; display: flex; justify-content: space-between; align-items: center;}
+section #issuebox_wrap .issue {width: 170px; height: 310px; margin:0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+section #issuebox_wrap .issue img {width: 170px; height: 236px; border: 1px solid #ddd;}
+section #issuebox_wrap .issue h3 {margin-top: 10px; font-size: 14px; font-weight: 500; color: #333; line-height: 130%;}
+section #issuebox_wrap .issue p {font-size: 12.5px; font-weight: 300; color: #666;}
+
+/*이슈&북 좌우버튼 */
+section #issuebox_wrap span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #issuebox_wrap span:hover {color: #947555;}
+section #issuebox_wrap .prev {left: 0;}
+section #issuebox_wrap .next {right: 0;}
+
+/*코너 아이콘*/
+section #coner_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 60px 0 0 0; display: flex; justify-content: space-between; align-items: center;}
+section .iconbox {width: 100px; height: auto; margin: 0; color: rgb(148,117,85,0.5); display: flex; flex-direction: column; justify-content: flex-end; align-items: center;}
+section .iconbox em {font-style: normal; color: rgb(148,117,85,1); font-size: 14px;}
+section .iconbox i {font-size: 3em; margin-bottom: 10px; transition: all 0.3s;}
+section .iconbox:hover i{color: rgb(148,117,85,1);}
+section .iconbox:hover em{text-decoration: underline;}
+
+/*주제별 베스트*/
+section #theme {width: 1100px; height: auto; margin: 0 auto; padding: 60px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-end;}
+section #theme h1 {width: 100%; color: #333; font-size: 1.4em; font-weight: 400; margin: 0;}
+section #theme h2 {width: 100%; height: 25px; color: #333; font-size: 1.2em; font-weight: 300; margin:0;}
+
+section #theme #theme_wrap {width: 670px; height: 360px; margin:0; border:1px solid #ddd; position: relative; overflow: hidden;}
+
+section #theme .vegan_slide {width: 2010px; height: 360px;}
+
+section #theme .themebox {width: 670px; height: 360px; margin: 0; padding: 25px 60px; float: left; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
+
+section #theme .themebook {width: 150px; height: 270px; margin:0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+section #theme .themebook img {width: 150px; height: 200px; border: 1px solid #ddd;}
+section #theme .themebook h3 {margin-top: 10px; font-size: 14px; font-weight: 500; color: #333; line-height: 130%;}
+section #theme .themebook p {font-size: 12.5px; font-weight: 300; color: #666;}
+
+/*주제별 베스트 좌우버튼 */
+section #theme span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #theme span:hover {color: #947555;}
+section #theme .prev {left: 0;}
+section #theme .next {right: 0;}
+
+/*베스트셀러*/
+section #theme #bestseller {width: 430px; height: 360px; margin: 0; padding: 25px; border:1px solid #ddd; border-left: none; position: relative;}
+
+section #theme #bestseller #booktap {width: 220px; height: 240px; margin: 40px 0 0 0; position: relative; overflow: hidden;}
+
+section #theme #bestseller #list_slide {width: 440px; height: 240px;}
+
+section #theme #bestseller .list {width: 220px; height: 240px; margin: 0; float: left; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
+
+section #theme #bestseller .list {width: 220px; height: 240px; font-weight: 300; float: left; display: flex; flex-direction: column; align-content: space-between;}
+section #theme #bestseller .list em {font-style: normal; padding: 2px 4px; line-height: 24px; text-align: center; font-size: 12px; background-color: #947555; color: #fff;}
+section #theme #bestseller .list li {float: left; width: 85%; font-size: 14.6px; letter-spacing: -0.5px; cursor: pointer; color: #666; line-height: 20px;}
+section #theme #bestseller .list li:hover {color: #947555;}
+
+section #theme #bestseller span {width: 40px; position: absolute; top: 74px; color: #666; line-height: 16px; margin-right: 8px; padding-right: 8px; color: #666; font-size: 16px;  font-weight: 400; cursor: pointer;}
+section #theme #bestseller span:first-of-type {border-right: 1px solid #ddd;}
+section #theme #bestseller span:hover {color: #4169E1;}
+section #theme #bestseller #tap_b {left: 24px;}
+section #theme #bestseller #tap_g {left: 74px;}
+
+/*베스트셀러 - 도서 추천 배너*/
+section #theme #bestbn {position: absolute; bottom: 25px; right: 0; width: 200px; height: auto; text-align: center;}
+section #theme .bnbox {display: flex; flex-direction: column; justify-content: flex-end; align-items: center;}
+section #theme .bnbox img {width: 110px; margin-bottom: 10px;}
+section #theme .bnbox p {font-size: 15px;  color: #666;}
+
+/*#키워드 베스트*/
+section #keyword_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 60px 0 0 0; display: flex; flex-flow: row wrap; justify-content: flex-start; align-items: flex-start;}
+section #keyword_wrap h1 {width: 100%; color: #333; font-size: 1.4em; font-weight: 400; margin: 0 20px 1% 0;}
+section .btn_key {margin-right: 10px; padding: 0 1.6%; line-height: 36px; border: 1.8px solid #947555; color: #947555; border-radius: 100px; transition: all 0.2s;}
+section .btn_key:hover {border: 1.8px solid #947555; background-color: #947555; color: #fff;}
+
+/*일반도서 베스트*/
+section #best_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 60px 0 40px 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start;}
+section #best_wrap h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 0 1% 0;}
+section #best_wrap #best_list {width: 86%; line-height: 16px;}
+section #best_wrap #best_list > li {float: left; margin: 6px 6px 0 0; padding: 0 1.6%; line-height: 24px; border: 1.8px solid #4169E1; color: #4169E1; border-radius: 100px; transition: all 0.2s; cursor: pointer;}
+
+section #best_book {width: 1100px; height: 380px; margin:0; border:1px solid #ddd; position: relative; overflow: hidden;}
+
+section #best_book .best_wrap {width: 1100px; height: 380px; position: relative;}
+section #best_book .best_wrap:not(:first-of-type) {position: absolute; top:0; left: 0; display: none;}
+
+section #best_book .day_slide,.week_slide,.mon_slide {width: 2200px; height: 380px; display: flex;}
+
+section #best_book .daybox,.weekbox,.monbox {width: 1100px; height: 380px; margin: 0; padding: 25px 60px; display: flex; justify-content: space-between; align-items: center;}
+
+section #best_book .bbox {width: 170px; height: 310px; margin:0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+section #best_book .bbox  img {width: 170px; height: 236px; border: 1px solid #ddd;}   
+section #best_book .bbox  h3 {margin-top: 10px; font-size: 14px; font-weight: 500; color: #333; line-height: 130%;}
+section #best_book .bbox  p {font-size: 12.5px; font-weight: 300; color: #666;}
+section #best_book .bbox  h5 {margin: 0; color:#4169E1; font-size:14px; font-weight: 500; cursor: pointer;}
+section #best_book .bbox  h5 em {font-style: normal; font-weight: 400; color:#333;}
+
+/*일반도서 베스트 좌우버튼 */
+section #best_book span {position: absolute; top: 50%; display: block; transform: translateY(-50%); font-size: 2em; width: 26px; line-height: 40px; font-weight: 200; text-align: center; color: #ddd; cursor: pointer;}
+section #best_book span:hover {color: #4169E1;}
+section #best_book .prev {left: 0;}
+section #best_book .next {right: 0;}
+
+/*펜벗 배너*/
+section #banner {width: 100%; height: 287px; margin: 0 auto; position: relative;}
+section #banner .bn_gbcolor {position: absolute; bottom: 54px; width: 100%; height: 170px; background-color: #fee05a; }
+section #banner .bn_wrap {position: absolute; bottom: -54px; left: 50%; transform: translateX(-50%); display: block; width: 1100px; height: 287px;}
+section #banner .bn_wrap img {width: 100%; height: 100%;}
+
+/*기프트*/
+section #gift {width: 1100px; height: auto; margin: 0 auto; padding: 40px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start; position: relative;}
+section #gift h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 20px 1% 0;}
+
+section #gift .gift_wrap {width: 1100px; height: 360px; margin:0; border:1px solid #ddd; position: relative; overflow: hidden;}
+
+section #gift .giftimg_slide {width: 3300px; height: 360px;}
+
+section #gift .topbox {width: 1100px; height: 360px; margin: 0; float: left; display: flex; justify-content: space-between;}
+section #gift .giftbn {width: 33.4%; height: 360px; overflow: hidden; border-right:1px solid #ddd;}
+section #gift .giftbn img {width: auto; height: 100%;}
+
+/*기프트 좌우버튼 */
+section #gift span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+section #gift span:hover {background-color: #eee;}
+
+section #gift .prev {top: 50px; right: 18px; text-align: left;}
+section #gift .next {top: 50px; right: 0; text-align: right;}
+
+/*판촉 할인*/
+section #gift #gift_b {width: 100%; height: 360px; margin: 40px 0 0 0; border:1px solid #ddd; border-right: none; display: flex; justify-content: space-between; align-items: center;}
+section #gift #gift_b .giftprice {width: 33.4%; height: 357px; margin: 0; border-right:1px solid #ddd;}
+section #gift #gift_b .giftprice .giftimg {width: 100%; height: 235px; overflow: hidden;}
+section #gift #gift_b .giftprice .giftimg img {width: 100%; height: 100%; cursor: pointer; transform: scale(1); transition: all 0.35s;}
+section #gift #gift_b .giftprice .giftimg img:hover {transform: scale(1.3);}
+
+section #gift #gift_b .gifttext {width: 100%; padding: 20px;}
+section #gift #gift_b .gifttext h2 {font-size: 18px; font-weight: 400; color: #333;}
+section #gift #gift_b .gifttext h5 {font-size: 15px; font-weight: 300; color: #666; line-height: 30px;}
+section #gift #gift_b .gifttext h3 {font-size: 16px; font-weight: 500; color: #666;}
+section #gift #gift_b .gifttext h3 em {font-style: normal; font-size: 18px; font-weight: 600; color: #DC143C;}
+
+/*북스토리*/
+section #story {width: 100%; height: auto; margin: 60px auto; padding: 60px 0;background-color: #eee;}
+section #story #story_wrap{width: 1100px; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-between;}
+section #story #story_wrap h1 {width: 100%; color: #333; font-size: 1.4em; font-weight: 400; margin: 0 0 10px 0;}
+
+section #story .nomad {width: 420px; height: 340px; margin: 0; position: relative; border: 1px solid #ddd; overflow: hidden;  cursor: pointer;}
+section #story .nomad .nd_grid {width: 1260px; height: 340px;}
+section #story .nomad .nd_grid li {width: 420px; height: 340px; position: relative; overflow: hidden; float: left;}
+section #story .nomad .nd_grid li img{width: 100%; height: 100%;}
+section #story .nomad .nomadtext {width: 100%; height: 80px; position: absolute; bottom: 0; left: 0; display: flex; flex-direction: column; justify-content: center; background-color: rgb(0,0,0,0.6); padding: 0 20px;}
+section #story .nomad .nomadtext h5 {font-weight: 300; font-size: 16px; color: #999;}
+section #story .nomad .nomadtext h3 {font-weight: 400; font-size: 20px;  color: #fff;}
+
+section #story .nomad span {position: absolute; top: 50%; display: block; transform: translateY(-50%); border: 1px solid #ddd; width: 26px; line-height: 30px; background-color: rgb(255,255,255,0.5); color: #999; cursor: pointer;}
+section #story .nomad span:hover {background-color: rgb(0,0,0,0.5); color: #fff;}
+section #story .nomad .prev {left: 0; text-align: left; border-left: none;}
+section #story .nomad .next {right: 0; text-align: right; border-right: none;}
+
+/*사는 이야기*/
+section #story #memory {width: 300px; height: 340px; margin: 0; display: flex; flex-direction: column; justify-content: space-between;}
+section #story #memory .mo_grid {width: 100%; height: 80px; margin: 0; display: flex; flex-flow: column wrap; justify-content: center; align-content: flex-start;}
+section #story #memory .mo_grid .imgbox_m {width: 120px; height: 80px; margin: 0 12px 0 0;}
+section #story #memory .mo_grid .imgbox_m img {width: 100%; height: 100%;}
+section #story #memory .mo_grid h3 {font-size: 15px; font-weight: 500; color: #666; cursor: pointer;}
+section #story #memory .mo_grid h3:hover {text-decoration: underline;}
+section #story #memory .mo_grid p {margin-top: 4px; font-size: 13px; font-weight: 300; color: #666;}
+
+/*베스트 리뷰*/
+section #story #review {width: 360px; height: 340px; margin: 0; position:relative; display: flex; flex-flow: column wrap; justify-content: space-between;}
+section #story #review  h2 {width: 100%; font-size: 18px; font-weight: 400; color: #333;}
+
+section #story #review .review_grid {width: 360px; height: 310px; margin: 0; position: relative; overflow: hidden;}
+section #story #review .review_slide {width: 722px; height: 310px; margin: 0;}
+section #story #review .reviewbox {width: 360px; height: 310px; display: flex; flex-flow: row wrap; justify-content: space-between; align-content: space-between; float: left;}
+
+section #story #review .reviewbox li {width: 176px; height: 150px; border: 1px solid #ddd; background-color: #fff;}
+section #story #review .reviewbox li img{width: 176px; height: 90px;}
+section #story #review .reviewbox li h5 {padding: 0 10px; font-size: 12px; font-weight: 400; color: #666;}
+section #story #review .reviewbox li h6 {padding: 0 10px; font-size: 10px; font-weight: 300; color: #999;}
+
+section #story #review p {position:absolute; top: 1px; right: 40px; display:block;color:#999; font-size: 14px; font-weight: 300; line-height: 24px; letter-spacing: 1px;}
+
+section #story #review span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+section #story #review span:hover {background-color: #eee;}
+
+section #story #review .prev {top: 4px; right: 17px; text-align: left;}
+section #story #review .next {top: 4px; right: 0; text-align: right;}
+
+/*서점에서 만난 사람*/
+section #story #people {width: 420px; height: 260px; margin: 30px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; position: relative;}
+section #story #people h2 {width: 100%; font-size: 18px; font-weight: 400; color: #333;}
+
+section #story #people .people_wrap {width: 420px; height: 226px; margin: 0; position: relative; overflow: hidden;}
+section #story #people .peple_slide {width: 840px; height: 310px; margin: 0;}
+section #story #people .ppimgbox {width: 420px; height: 226px; display: flex; flex-flow: row wrap; justify-content: space-between; align-content: space-between; float: left;}
+
+section #story #people .ppimgbox li {width: 204px; height: 226px; border: 1px solid #ddd; background-color: #fff;}
+section #story #people .ppimgbox li img {width: 204px; height: 150px;}
+section #story #people .ppimgbox li h5 {padding: 0 14px; font-size: 14px; font-weight: 400; color: #333;}
+section #story #people .ppimgbox li h6 {padding: 0 14px; font-size: 13px; font-weight: 300; color: #666;}
+
+section #story #people p {position:absolute; top: 1px; right: 40px; display:block;color:#999; font-size: 14px; font-weight: 300; line-height: 24px; letter-spacing: 1px;}
+
+section #story #people span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+section #story #people span:hover {background-color: #eee;}
+
+section #story #people .prev {top: 4px; right: 17px; text-align: left;}
+section #story #people .next {top: 4px; right: 0; text-align: right;}
+
+
+/*펜벗의 이야기*/
+section #story #penfriend {width: 300px; height: 260px; margin: 30px 0 0 0;}
+section #story #penfriend h2 {width: 100%; font-size: 18px; font-weight: 400; color: #333;}
+section #story #penfriend .penbnbox {width: 300px; height: 226px; margin-top: 7px; border: 1px solid #ddd; overflow: hidden; cursor: pointer;}
+section #story #penfriend .penbnbox img {width: 100%; height: 100%;}
+
+/*100인의 큐레이션*/
+section #story #curation {width: 360px; height: 260px; margin: 30px 0 0 0; display: flex; flex-flow: row wrap; justify-content: space-between; position: relative;}
+section #story #curation h2 {width: 100%; font-size: 18px; font-weight: 400; color: #333;}
+
+section #story #curation .cuwrap_wrap {width: 360px; height: 226px; margin: 0; position: relative; overflow: hidden;}
+section #story #curation .cuwrap_slide {width: 840px; height: 310px; margin: 0;}
+section #story #curation .cuimgbox {width: 360px; height: 226px; display: flex; flex-flow: row wrap; justify-content: space-between; align-content: space-between; float: left;}
+
+section #story #curation .cuimgbox li {width: 176px; height: 226px; overflow: hidden; border: 1px solid #ddd; background-color: #fff;}
+section #story #curation .cuimgbox li img {width: 180px; height: 150px;}
+section #story #curation .cuimgbox li h5 {padding: 0 10px; font-size: 14px; font-weight: 400; color: #333;}
+section #story #curation .cuimgbox li h6 {padding: 0 10px; font-size: 13px; font-weight: 300; color: #666;}
+
+section #story #curation p {position:absolute; top: 1px; right: 40px; display:block;color:#999; font-size: 14px; font-weight: 300; line-height: 24px; letter-spacing: 1px;}
+
+section #story #curation span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+section #story #curation span:hover {background-color: #eee;}
+
+section #story #curation .prev {top: 4px; right: 17px; text-align: left;}
+section #story #curation .next {top: 4px; right: 0; text-align: right;}
+
+section #story #curation .cuwrap {width: 174px; height: 226px; margin: 6px 0 0 0; border: 1px solid #ddd; background-color: #fff;}
+section #story #curation .cuwrap .cuimgbox {width: 100%; height: 130px; margin-bottom: 8px; overflow: hidden;}
+section #story #curation .cuwrap .cuimgbox img {width: auto; height: 100%;}
+section #story #curation .cuwrap h5 {padding: 0 10px; font-size: 14px; font-weight: 400; color: #333;}
+section #story #curation .cuwrap h6 {padding: 0 10px; font-size: 12px; font-weight: 300; color: #666;}
+
+/*회사소개*/
+section #bandi_wrap {width: 1100px; height: auto; margin: 0 auto; padding: 0 0 60px 0; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start;}
+section #bandi_wrap h1 {color: #333; font-size: 1.4em; font-weight: 400; margin: 0 20px 1% 0;}
+
+section #bandi_wrap #bandi {width: 100%; height: 295px; margin: 0; display: flex; flex-flow: row wrap; justify-content: space-between;}
+
+/*브랜드 연상, 사진*/
+section #bandi_wrap #introduce {width: 730px; height: 295px; margin: 0; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #ddd;}
+section #bandi_wrap #introduce h2 {width: 100%; font-size: 15px; font-weight: 500; color: #333;}
+section #bandi_wrap #introduce h6 {font-size: 12.6px; font-weight: 300; color: #666;}
+
+section #bandi_wrap #introduce #video {width: 340px; height: 265px; margin: 0; position: relative; position: relative;}
+section #bandi_wrap #introduce #video .frame {width: 340px; height: 200px; margin-bottom: 6px; overflow: hidden;}
+section #bandi_wrap #introduce #video .frame img {width: 340px; height: 200px; margin-bottom: 6px; overflow: hidden;}
+
+section #bandi_wrap #introduce #photo {width: 340px; height: 265px; margin: 0; position: relative;}
+
+section #bandi_wrap #introduce .photo_wrap {width: 340px; height: 265px; margin: 0; position: relative; overflow: hidden;}
+section #bandi_wrap #introduce .photo_slide {width: 1020px; height: 310px; margin: 0;}
+section #bandi_wrap #introduce .photobox {width: 340px; height: 265px; display: flex; flex-flow: row wrap; justify-content: space-between; align-content: space-between; float: left;}
+
+section #bandi_wrap #introduce .photobox li {width: 340px; height: 265px; overflow: hidden;}
+section #bandi_wrap #introduce .photobox li img {width: 340px; height: 200px; margin-bottom: 6px; overflow: hidden;}
+section #bandi_wrap #introduce .photobox li h2 {width: 100%; font-size: 15px; font-weight: 500; color: #333;}
+section #bandi_wrap #introduce .photobox li h6 {font-size: 12.6px; font-weight: 300; color: #666;}
+
+section #bandi_wrap #introduce p {position:absolute; bottom: -2px; right: 40px; display:block;color:#999; font-size: 14px; font-weight: 300; line-height: 24px; letter-spacing: 1px;}
+
+section #bandi_wrap #introduce span {position: absolute; display: block; margin: 0; border: 1px solid #ddd; background-color: #fff; font-size: 12px; width: 18px; line-height: 18px; color: #999; cursor: pointer;}
+section #bandi_wrap #introduce span:hover {background-color: #eee;}
+
+section #bandi_wrap #introduce .prev {bottom: 0; right: 17px; text-align: left;}
+section #bandi_wrap #introduce .next {bottom: 0; right: 0; text-align: right;}
+
+/*공지사항*/
+section #bandi_wrap #notice {width: 360px; height: 295px; margin: 0; display: flex; flex-direction: column; justify-content: space-between; position: relative;}
+section #bandi_wrap #notice h2 {width: 100%; font-size: 18px; font-weight: 400; color: #333;}
+section #bandi_wrap #notice p {position:absolute; top: 1px; right: 0; display:block;color:#999; font-size: 12px; font-weight: 300; line-height: 24px; letter-spacing: 1px; cursor: pointer;}
+section #bandi_wrap #notice ul li {line-height: 180%; font-size: 12.5px; font-weight: 300; color: #333; cursor: pointer;}
+section #bandi_wrap #notice ul li:hover {text-decoration: underline; color: #947555;}
+
+section #bandi_wrap #notice #noticbn {width: 100%; height: 120px; margin: 0; border: 1px solid #ddd; display: flex; flex-flow: column wrap; justify-content: center; align-content: center;}
+section #bandi_wrap #notice #noticbn img {width: 80px; height: 100px; margin: 0; border: 1px solid #ddd; margin-right: 20px; cursor: pointer;}
+section #bandi_wrap #notice #noticbn h3 {width: 230px; font-size: 16px; font-weight: 500; color: #333; cursor: pointer;}
+section #bandi_wrap #notice #noticbn h3:hover {text-decoration: underline;}
+section #bandi_wrap #notice #noticbn h5 {width: 230px; font-size: 12px; font-weight: 400;  color: #666;}
+section #bandi_wrap #notice #noticbn h6 {width: 230px; font-size: 14px; font-weight: 400;  color: #666;}
+
+/*사이트 내 가이드*/
+section #bandi_wrap #guide_wrap {width: 100%; height: 180px; margin: 30px 0 0 0; display: flex; justify-content: space-between; align-content: center;}
+
+section #bandi_wrap .guide {width: 180px; height: 100%; margin: 0;}
+section #bandi_wrap .guide h5 {font-size: 15px; font-weight: 500; color: #333; margin-bottom: 8px;}
+section #bandi_wrap .guide li {font-size: 13px; font-weight: 300; color: #666; line-height: 20px;}
+section #bandi_wrap .guide p {font-size: 14px; font-weight: 300; color: #666; line-height: 20px;}
+
+section #bandi_wrap .guide .btn_more {border: 1px solid #ddd; background-color: #fff; font-size: 12px; font-weight: 300; color: #666; margin-top: 8px; cursor: pointer;}
+section #bandi_wrap .guide .btn_more i{color: #999;}
+
+section #bandi_wrap .guide .gdimgbox {width: 180px; height: 72px; margin-top: 8px;; overflow: hidden;}
+section #bandi_wrap .guide .gdimgbox img {width: auto; height: 120%;}
+
+section #bandi_wrap .guide .qrcord {width: 180px; height: 70px; margin-top: 8px;; overflow: hidden;}
+section #bandi_wrap .guide .qrcord img {width: auto; height: 100%;}

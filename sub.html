@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bandi & Lunis</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/80a2be1de2.js" crossorigin="anonymous"></script>
+  <script src="js/header.js"></script>
+  <script src="js/header_slide.js"></script>
+  <script src="js/left_add.js"></script>
+  <script src="js/sub.js"></script>
+  <script src="js/bestseller.js"></script>
+  <script src="js/together.js"></script>
+  <script src="js/together_slide.js"></script>
+  <script src="js/another.js"></script>
+  <script src="js/another_slide.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sub.css">
+
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <!--heard 시작 배너-->
+      <div id="hd_bn">
+        <div class="remove">
+          <p>×</p>
+        </div>
+      </div>
+
+      <!--버튼, 로그인 메뉴, 검색창-->
+      <div id="hd_wrap">
+        <div id="hd_left">
+          <a href="#" class="btn_hd">책과사람</a>
+          <a href="#" class="btn_hd">모바일앱</a>
+        </div>
+
+        <div id="hd_right">
+          <div id="btn_on" class="btn_lg">
+            <a href="#">바로온OFF</a>
+            <div id="offpop">
+              <h5>바로온 비접속중입니다.</h5>
+              <p>바로온으로 방문하면 구매 시 마다<br>2% 추가 적립 혜택을 받을 수 있습니다.<br>(도서만 구매시 적립 불가)</p>
+              <button>바로온 등록하기</button>
+            </div>
+          </div>
+
+          <a href="#" class="btn_lg">로그인</a>
+
+          <ul id="login">
+            <li><a href="#">회원가입</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">쇼핑카트</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">나의쇼핑 <i class="fas fa-angle-down"></i></a>
+              <ul class="sub_log">
+                <li>나의쇼핑정보</li>
+                <li>주문배송조회</li>
+                <li>적립내역</li>
+                <li>전환금(기프트카드 전환)</li>
+                <li>쿠폰조회</li>
+                <li>구매 히스토리</li>
+                <li>위시리스트</li>
+                <li>반딧불내역</li>
+                <li>회원정보</li>
+                <li>관심작가/신간알림</li>
+              </ul>
+            </li>
+            <li><span>|</span></li>
+            <li><a href="#">나의서재</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+
+        <!--로고, 검색창-->
+        <div id="top">
+          <a href="index.html" class="logo"><img src="img/logo.gif" alt=""></a>
+          <div id="search_wrap">
+            <!--검색창-->
+            <div id="search">
+              <ul id="selbox">
+                <li>통합검색&ensp;&ensp;<i class="fas fa-chevron-down"></i>
+                  <ul class="sel_sub">
+                    <li>통합검색</li>
+                    <li>국내도서</li>
+                    <li>해외주문</li>
+                    <li>음반</li>
+                    <li>DVD</li>
+                    <li>GIFT</li>
+                    <li>오피스문구</li>
+                  </ul>
+                </li>
+              </ul>
+              <input type="text" name="user_id" id="mainsearch" value="<사피엔스>에 도전하는 책!">
+              <button class="btn_sh"><i class="fa fa-search"></i></button>
+            </div>
+            <!--장바구니-->
+            <div id="cart_box">
+              <a href="#"><i id="btn_ct" class="fas fa-shopping-cart"></i></a>
+              <div id="cart">
+                <h5>최근 담긴 상품</h5>
+                <p>쇼핑카트에 담긴 상품이<br> 없습니다.</p>
+                <button>쇼핑카트 바로가기</button>
+              </div>
+            </div>
+            <div id="search_key">
+              <ul>
+                <li><a href="#">히가시노 게이고</a></li>
+                <li>|</li>
+                <li><a href="#">부의도약</a></li>
+                <li>|</li>
+                <li><a href="#">2030 축의 전환</a></li>
+                <li>|</li>
+                <li><a href="#">모두의 주식</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--추천도서 배너-->
+          <a href="#" id="top_bn"><img src="img/top_banner.jpg" alt=""></a>
+        </div>
+      </div>
+
+      <!--메뉴-->
+      <div id="menu_wrap">
+        <nav>
+          <!--메뉴(전체)-->
+          <ul class="menu">
+            <li><a href="#"><i class="fas fa-bars"></i>&ensp;전체</a>
+              <!--sub메뉴 시작-->
+              <div class="sub_wrap">
+                <div class="sub">
+                  <!--sub(전체-도서.키즈샵,수험서)-->
+                  <div class="sub_grid1">
+                    <h5>도서&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li><em>소설</em></li>
+                      <li><em>장르소설</em></li>
+                      <li>시/에세이/기행</li>
+                      <li>청소년교양</li>
+                      <li>경제/경영</li>
+                      <li><em>자기계발</em></li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>유아</li>
+                      <li>육아/자녀교육</li>
+                      <li>어린이</li>
+                      <li>어린이영어</li>
+                      <li>아동전집</li>
+                      <li>정가제 Free</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>가정/생활/요리</li>
+                      <li>건강/의학/미용</li>
+                      <li>여행/취미/레저</li>
+                      <li>잡지</li>
+                      <li>만화</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>인문/교양/철학</em></li>
+                      <li>역사/신화/문화</li>
+                      <li>종교</li>
+                      <li>사회/정치/법률</li>
+                      <li>예술/대중문화</li>
+                      <li>자연과학/공학</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>초등참고서</em></li>
+                      <li><em>중/고등참고서</em></li>
+                      <li><em>외국어/사전</em></li>
+                      <li>대학교재</li>
+                      <li>컴퓨터/IT</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>서양서</li>
+                      <li>일본서</li>
+                    </ul>
+
+                    <h5>키즈샵&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li><em>유아</em></li>
+                      <li>어린이</li>
+                      <li>유아동전집</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>육아/자녀교육</li>
+                      <li>임신/출산/태교</li>
+                      <li>교구완구</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>초등참고서</em></li>
+                      <li>어린이 영어</li>
+                      <li>출산/유아용품</li>
+                    </ul>
+
+                    <h5>수험서&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>공무원</li>
+                      <li>국가고시</li>
+                      <li>임용시험</li>
+                      <li>대·공기업/면접</li>
+                      <li>대표저자수험서</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>국가기술자격증</li>
+                      <li>국가전문자격증</li>
+                      <li>민간전문자격증</li>
+                      <li>외국자격증</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>대학원 편입/진학</li>
+                      <li>공부법/안내서</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-음반)-->
+                  <div class="sub_grid2">
+                    <h5>음반&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>가요</li>
+                      <li>팝</li>
+                      <li>록</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>클래식</li>
+                      <li>국악</li>
+                      <li>월드뮤직</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>재즈</li>
+                      <li>일본음악</li>
+                      <li>OST</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>종교음악</li>
+                      <li>LP</li>
+                      <li>해외구매</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>기타</li>
+                      <li>국내 블루레이</li>
+                      <li>해외구매 영화 DVD</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-기프트)-->
+                  <div class="sub_grid2">
+                    <h5>GIFT&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>디자인문구</li>
+                      <li>오피스/개인</li>
+                      <li>디지털</li>
+                      <li>키덜트/여가</li>
+                      <li>키친/식품</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>홈리빙/패브릭</li>
+                      <li>가구/수납</li>
+                      <li>패션/잡화</li>
+                      <li>뷰티</li>
+                      <li>출산/육아</li>
+                      <li>독서용품</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-오피스문구)-->
+                  <div class="sub_grid2">
+                    <h5>오피스문구&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>사무용품</li>
+                      <li>복사용지/지류</li>
+                      <li>필기구</li>
+                      <li>학용품/학습준비물</li>
+                      <li>화일바인더</li>
+                      <li>가전제품</li>
+                      <li>사무기기</li>
+                      <li>전산용품</li>
+                      <li>잉크/토너</li>
+                      <li>디자인/화방</li>
+                      <li>생활용품</li>
+                      <li>금고사무용품</li>
+                      <li>산업용품</li>
+                      <li>미용위생</li>
+                      <li>식음료</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">도서</a></li>
+            <li><a href="#">eBook</a></li>
+            <li><a href="#">음악</a></li>
+            <li><a href="#">GIFT</a></li>
+            <li><a href="#">오피스문구</a></li>
+            <li><a href="#">키즈</a></li>
+          </ul>
+
+          <ul id="gnb_se_menu">
+            <li><a href="#">베스트셀러</a></li>
+            <li><a href="#">새로나온책</a></li>
+            <li><a href="#">예약판매도서</a></li>
+            <li><a href="#">지금혜택</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--사이드 팝업-->
+    <div id="sidepop_wrap">
+      <!--왼쪽 팝업창-->
+      <div id="left_pop">
+        <img src="img/bn_left1.png" alt="" class="lbn">
+        <div id="left_bn">
+          <img src="img/left_pop1.png" alt="">
+          <div class="left_bn_txt">
+            <h3>About 펜벗</h3>
+            <h3>펜벗 큐레이션</h3>
+          </div>
+        </div>
+
+        <ul class="pennav">
+          <li>혜택＆서비스</li>
+          <li>북셀프<button><i class="fas fa-angle-right"></i></button></li>
+          <li>반디e캐시<button><i class="fas fa-angle-right"></i></button></li>
+          <li>기프트카드<button><i class="fas fa-angle-right"></i></button></li>
+          <li>무료배송안내<button><i class="fas fa-angle-right"></i></button></li>
+          <li>서재활동혜택<button><i class="fas fa-angle-right"></i></button></li>
+        </ul>
+
+        <div class="left_sns"><img src="img/left_pop_instar.jpg" alt=""></div>
+        <div class="left_sns"><img src="img/left_pop_%20naver.jpg" alt=""></div>
+      </div>
+
+      <!--오른쪽 팝업창-->
+      <div id="right_pop">
+        <div class="right_bn"><img src="img/right_pop1.jpg" alt=""></div>
+        <div class="right_bn"><img src="img/right_pop2.jpg" alt=""></div>
+
+        <button class="btn_rtp">주요서비스<i class="fas fa-angle-right"></i></button>
+        <button class="btn_rtp">반딧불환전<i class="fas fa-angle-right"></i></button>
+
+        <div class="products">
+          <h5>최근 본 상품</h5>
+
+          <div class="view_pd"><img src="img/right_view1.jpg" alt=""></div>
+          <div class="view_pd"><img src="img/right_view2.jpg" alt=""></div>
+          <p><i class="fas fa-caret-left"></i> 1 / 1 <i class="fas fa-caret-right"></i></p>
+
+          <button class="btn_list">나의쇼핑<i class="fas fa-angle-right"></i></button>
+          <button class="btn_list">위시리스트<i class="fas fa-angle-right"></i></button>
+          <button class="btn_list">구매히스토리<i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!--서브 nav-->
+      <div id="subnav">
+        <ul class="subnav_main">
+          <li><a href="#">홈</a></li>
+          <li><i class="fas fa-chevron-right"></i></li>
+          <li><a href="#">도서</a></li>
+          <li><i class="fas fa-chevron-right"></i></li>
+          <li><a href="#" class="subnv_box">시/에세이/기행&ensp;<i class="fas fa-angle-down"></i></a>
+            <ul class="submenu">
+              <li>소설</li>
+              <li>장르소설</li>
+              <li>시/에세이/기행</li>
+              <li>인문/교양/철학</li>
+              <li>역사/신화/문화</li>
+              <li>종교</li>
+              <li>사회/정치/법률</li>
+              <li>경제/경영</li>
+              <li>자기계발</li>
+              <li>외국어/사전</li>
+              <li>가정/생활/요리</li>
+            </ul>
+          </li>
+          <li><i class="fas fa-chevron-right"></i></li>
+          <li><a href="#" class="subnv_box">에세이&ensp;<i class="fas fa-angle-down"></i></a>
+            <ul class="submenu">
+              <li>에세이</li>
+              <li>여행</li>
+              <li>전기/자서전/평전</li>
+              <li>희곡/시나리오</li>
+              <li>시</li>
+              <li>시론/수필론</li>
+              <li>문지 스펙트럼 시리즈</li>
+            </ul>
+          </li>
+          <li><i class="fas fa-chevron-right"></i></li>
+          <li><a href="#" class="subnv_box">에세이 모음집&ensp;<i class="fas fa-angle-down"></i></a>
+            <ul class="submenu">
+              <li>에세이모음집</li>
+              <li>예술에세이</li>
+              <li>유머/풍자에세이</li>
+              <li>명상/명언/잠언에세이</li>
+              <li>사진/그림/카툰에세이</li>
+              <li>감성/사랑/연애에세이</li>
+              <li>독서에세이</li>
+              <li>삶/인생 에세이</li>
+              <li>실화/수기/일기</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!--상품 미리보기-->
+      <div id="contents">
+        <div id="inner_left">
+          <div class="prev_book">
+            <img src="img/book_corver.jpg" alt="책표지">
+          </div>
+          <!--미리보기-->
+          <button class="prev_btn">미리보기</button>
+
+          <!--재고현황-->
+          <div class="inner_stock">
+            <table>
+              <tr>
+                <td>인터넷</td>
+                <td>신세계<br>강남점</td>
+                <td>롯데<br>스타시티점</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>목동점</td>
+                <td>여의도<br>신영증권점</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>-</td>
+              </tr>
+            </table>
+
+            <!--키워드 픽-->
+            <div class="pick">
+              <h3>키워드 Pick</h3>
+              <button>안내</button>
+              <ul>
+                <li>불안</li>
+                <li>응원</li>
+                <li>삶</li>
+                <li>위로</li>
+                <li>사랑</li>
+                <li>스스로</li>
+                <li>긍정</li>
+              </ul>
+            </div>
+
+            <!--다른상품 정보-->
+            <ul class="other">
+              <li>
+                <h3>이 책의 다른 상품 정보</h3>
+              </li>
+              <li>eBook : 8,100원<i class="fas fa-angle-right"></i></li>
+              <li>sam : 한달 3권 9,900원<i class="fas fa-angle-right"></i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="inner_right">
+          <!--책 제목-->
+          <div class="title">
+            <ul class="tag">
+              <li>베스트</li>
+              <li>배송 품질 보상</li>
+            </ul>
+
+            <h1>내가 빛나는 순간&ensp;<span>오늘, 행복이 선명하게 다가옵니다</span></h1>
+
+            <ul class="author">
+              <li><a href="#">파울로 코엘료</a> 저</li>
+              <li>|</li>
+              <li><a href="#">박태옥</a> 역</li>
+              <li>|</li>
+              <li><a href="#">자음과모음</a></li>
+              <li>|</li>
+              <li>2020년 12월 23일</li>
+            </ul>
+          </div>
+
+          <!--판매 가격-->
+          <div class="rowitem">
+            <table id="price">
+              <tr>
+                <td>정가</td>
+                <td colspan="2"><del>14,800원</del></td>
+              </tr>
+              <tr>
+                <td>판매가</td>
+                <td colspan="2" style="color: crimson"><em>13,200</em>원 [10% 할인]</td>
+              </tr>
+              <tr>
+                <td>제휴할인</td>
+                <td colspan="2">
+                  <a href="#" class="rowbtn">카드할인/포인트 안내</a>
+                  <a href="#" class="rowbtn">무이자</a>
+                </td>
+              </tr>
+              <tr>
+                <td>적립금</td>
+                <td><span>740원 적립</span> [5%P]&ensp;</td>
+                <td>
+                  5만원이상 구매시 2천원 / 멤버십 최대 <span>3% 추가 적립</span>
+                  &ensp;<a href="#" class="rowbtn">?</a><br>
+                  <span style="color: crimson">바로ON</span> 접속하면 <span style="color: crimson">2%</span> <span>추가
+                    적립</span>
+                  &ensp;<a href="#" class="rowbtn"><i class="fas fa-angle-right"></i></a><br>
+                  N pay 결제 시 네이버포인트 <span>6% 적립</span>
+                  &ensp;<a href="#" class="rowbtn"><i class="fas fa-angle-right"></i></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!--배송료-->
+          <div class="delivery">
+            <table>
+              <tr>
+                <td>배송료</td>
+                <td><em style="color: #555">무료배송</em></td>
+              </tr>
+              <tr>
+                <td>당일배송</td>
+                <td>[서울 서초구 신반포로] 기준으로 <em>[내일]</em> 받아볼 수 있습니다. <span>지역변경</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!--구매 버튼-->
+          <div class="count">
+            <table>
+              <tr>
+                <td>
+                  수량&ensp;</td>
+                <td class="count_box">
+                  <button type="button" name="button" onclick="minus()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="text" name="pop_out" value="0" readonly="readonly" style="text-align:center;"
+                    id="countpush">
+                  <button type="button" name="button" onclick="plus()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </td>
+                <td>&ensp;더욱 새로워진 반디앤루니스 옴니채널 <em>북셀프 3.0</em>을 확인하세요.</td>
+              </tr>
+            </table>
+
+            <div id="btn_wrap">
+              <button class="purchase" id="self_pur">북셀프 구매</button>
+              <img src="img/pickup.gif" alt="" id="pickup">
+              <button class="purchase" id="now_pur">바로 구매</button>
+              <button class="purchase" id="cart_pur">쇼핑카드 담기</button>
+              <button class="purchase" id="wish_pur">위시리스트</button>
+              <button class="purchase" id="book_pur">서재 담기</button>
+              <button class="purchase" id="theme_pur">테마 담기</button>
+            </div>
+          </div>
+
+          <!--에디터 한마디-->
+          <div class="etc_info">
+            <h3>에디터의 한마디</h3>
+            <p>이 시대 가장 사랑받는 작가 파울로 코엘료의 신작 에세이. 이책에서 그는 수많은 실패의 경험 속에서도 절대 흔들리지 않는, 나를 사랑하는 방법에 대해 말하고 있다. - MD추천 -</p>
+            <h5>회원리뷰 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+              <em>9.8 리뷰[10] 간단평[2] 테마[0]</em>
+              <button>참여하기</button><br>
+            </h5>
+            <h5>ISBN: <em>9788954442480 204쪽 128 x 188 (㎜)</em></h5>
+          </div>
+        </div>
+      </div>
+
+      <!--베스트셀러-->
+      <div id="nowbest">
+        <!--지금 이 책은-->
+        <div id="nowbook">
+          <h2>지금 이 책은</h2>
+          <p>판매지수 : <em>8,640</em><br>
+            주간 종합: <em>59</em>위<br>
+            주간 시/에세이/기행: <em>37</em>위<br>
+            주간 Top100: <em>4</em>주</p>
+        </div>
+
+        <!--이 분야의 베스트셀러-->
+        <div id="seller">
+          <h2>이 분야의 베스트 셀러</h2>
+          <div class="sellerbook"></div>
+          <div class="sellerbook"></div>
+          <div class="sellerbook"></div>
+        </div>
+
+        <!--베스트셀러 배너-->
+        <div id="nowbn">
+          <img src="img/seller_bn.jpg" alt="">
+        </div>
+      </div>
+
+      <!--함께 구매한 책-->
+      <div id="together_wrap">
+        <!--상품정보 메뉴 / 1책정보-->
+        <ul class="tapmenu">
+          <li><a href="#together_wrap">책정보</a></li>
+          <li><a href="#eventplan">이벤트/기획전</a></li>
+          <li><a href="#reviews">회원리뷰</a></li>
+          <li><a href="#return">반품/교환</a></li>
+        </ul>
+
+        <h1>이 책과 함께 구매한 책</h1>
+        <div id="tgbox_wrap">
+          <div class="together_slide">
+            <ul class="tgbox">
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+            </ul>
+            <ul class="tgbox">
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+              <li class="tbox"></li>
+            </ul>
+
+            <span id="tg_prev" class="prev">〈</span>
+            <span id="tg_next" class="next">〉</span>
+          </div>
+        </div>
+      </div>
+
+      <!--동영상 소개-->
+      <div id="video_intro">
+        <h1>동영상 소개</h1>
+        <iframe width="680" height="380" src="https://www.youtube.com/embed/b2EkyoTNhdY"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p>동영상이 제대로 보이지 않으세요?&ensp;<span>F＆Q보기</span></p>
+      </div>
+
+      <!--책소개-->
+      <div id="book_intro">
+        <h1>책 소개</h1>
+
+        <div class="btn_bintro">출판사 리뷰</div>
+
+        <div id="show_intro">
+          <h5>“오늘, 행복이 선명하게 다가옵니다”<br><br>
+            전 세계에서 가장 많이 번역된 작가,<br>
+            파울로 코엘료가 전하는 마법 같은 문장<br><br>
+            《연금술사》 《히피》 파울로 코엘료의 신작 에세이!<br>
+            ‘나’를 사랑하는 일에 서툰 사람들에게 전하는 “내가 빛나는 순간”</h5>
+          <p>빠르게 변화하는 세상에서 사람들은 자신의 가치와 의미를 잃어버리기 쉽다. 너무 많은 비교 대상과 넘어야 할 산을 보며 때로는 우울하고 불안하기만 하다. 전 세계에서 가장 많이 번역된 작가,
+            파울로 코엘료가 ‘나’를 사랑하는 일에 서툰 사람들을 위한 신작 에세이를 출간했다.<br>《내가 빛나는 순간》은 스스로를 믿고, 가치 있는 존재로 인지하는 데 도움을 주는 짧은 글을 담았다.
+            여기에 20주년을 맞아 새롭게 선보일 《마당을 나온 암탉》과 정지돈 작가의 짧은 소설 《농담을 싫어하는 사람》에 그림을 그렸으며, 국내외에서 활발하게 활동하고 있는 일러스트 작가 윤예지의 그림이
+            특유의 긍정적인 에너지를 전달한다.</p>
+
+          <button class="btn_show">펼쳐보기&ensp;<i class="fas fa-chevron-circle-down"></i></button><br>
+        </div>
+        <div id="hide_intro">
+          <p>파울로 코엘료는 에세이 《마법의 순간》《마크툽》을 통해 사랑, 용기, 인생 등 우리가 아직 해결하지 못한 삶의 의문과 문제들에 관한 ‘인생의 지혜’를 알려주었다. 《내가 빛나는 순간》 역시
+            수많은 실패의 경험 속에서도 절대 흔들리지 않는, 나를 사랑하는 방법에 대해 말하고 있다. “자신한테 너그러워지세요. 당신은 지금 아주 잘하고 있으니까요”라는 코엘료의 응원의 말처럼 이 책은
+            내면의 불안과 우울을 떨치고 진정으로 ‘나’와 가까워질 수 있도록 안내자가 되어준다.</p><br>
+
+          <h5>“나를 알면 알수록 멀리 나아갈 수 있습니다<br>
+            자신이 생각했던 것보다 훨씬 더”<br>
+            소리 내 읽으면 행복해지는 파울로 코엘료의 말!</h5>
+
+          <p>파울로 코엘료는 SNS 팔로워가 가장 많은 작가로, 그의 트위터에는 매일 영어, 스페인어, 프랑스어, 포르투갈어 등 다양한 나라의 언어로 짧은 글이 올라온다. 그중 전 세계의 팔로워를 열광시킨
+            글을 선별해 엮은 《마법의 순간》이 국내 독자뿐만 아니라 해외 독자들에게 많은 사랑을 받았다. 이 책은 《마법의 순간》 두 번째 이야기로, 나를 사랑하기 시작하면 세상이 놀랄 만큼 달라질 수
+            있다는 자기 긍정의 메시지를 전하고 있다.<br>
+            1장 ‘나를 믿고 한 걸음 앞으로’와 2장 ‘오늘의 마음을 소중하게 돌보며’에는 스스로의 좋은 점을 발견하고, 내 마음의 목소리에 귀 기울이게 해주는 글들을 담았다. 1장에서는 “나를 알면
+            알수록 멀리 나아갈 수 있습니다. 자신이 생각했던 것보다 훨씬 더”〈나를 알면 알수록〉라는 코엘료의 말처럼 자신을 믿고 한 걸음 앞으로 나아가라고 용기를 주고 있고, 2장에서는 “분명 행복해질
+            겁니다. 살아 있으므로 인생은 근사한 축제입니다”〈현재형 인간〉라고 지치고 상처받은 마음에 위로를 전한다.<br>
+            3장 ‘나에서 우리가 되는 연습’과 4장 ‘사소한 순간이 쌓이면 멋진 마법이 된다’에서는 자신을 먼저 사랑해야만 긍정적인 인관관계를 형성할 수 있다고 말한다. 다소 유아기적인 ‘자기애’가 아니라
+            건강한 자존감을 키우는 것이 타인과의 관계에서 보다 성숙한 태도를 가질 수 있으니까. 3장에서는 “누군가와 감정을 공유할 때, 비로소 이 우주가, 이 세상이 의미를 갖게 됩니다”〈느끼고
+            깨닫고〉라고 말하며 ‘나’에서 ‘우리’로 확장되어가는 세계를 보여준다. 4장에서는 ‘내가 빛나는 순간’들이 쌓여야 비로소 삶에 멋진 마법 같은 변화가 찾아올 수 있음을 알려주고 있다.</p>
+          <br>
+
+          <h5>눈가에 반짝이는 눈물도 입가에 반짝이는 웃음도<br>
+            모두, 내가 빛나는 순간</h5>
+
+          <p>“달걀은 외부의 힘으로 깨지면 삶이 끝납니다. 반면 내부의 힘으로 깨지면 새로운 삶이 시작되고요. 언제나 그렇듯 모든 위대함은 내부에서 비롯됩니다.”(〈내부의 힘〉) 파울로 코엘료는 세상의
+            모든 일은 자신을 긍정하고 사랑하는 것에서 시작된다고 말한다. 독자들은 여기에 실린 짧지만 오래 기억될 그의 문장을 통해 진정으로 ‘내가 빛나는 순간’과 만나게 될 것이다.</p>
+          <button class="btn_hide">닫기&ensp;<i class="fas fa-chevron-circle-up"></i></button>
+        </div>
+
+      </div>
+
+      <!--저자 소개-->
+      <div id="author_intro">
+        <h1>저자 소개</h1>
+
+        <div class="author_left">
+          <div class="aut_photo"><img src="img/Paulo_Coelho.jpg" alt=""></div>
+          <span class="aut_btn">관심작가 축가 / 신간알림</span>
+        </div>
+
+        <div class="author_right">
+          <table>
+            <tr>
+              <th><a href="#">파울로 코엘료</a> <em>(1947.08.24)</em></th>
+              <th>최근저서</th>
+            </tr>
+            <tr>
+              <td>구분 : 저서</td>
+              <td><a href="#">[저서]히피</a></td>
+            </tr>
+            <tr>
+              <td>국적 : 브라질</td>
+              <td><a href="#">[저서]파울로 코엘료 자유 Day Planner...</a></td>
+            </tr>
+            <tr>
+              <td>분류 : 문학가 , 인문/철학자 , 수험/학습서 저자 , 기타</td>
+              <td><a href="#">[저서]스파이</a></td>
+            </tr>
+            <tr>
+              <td>인기지수 : 41,888</td>
+              <td><a href="#">[저서]마크툽</a></td>
+            </tr>
+            <tr>
+              <td>반디추천 : 16회선정</td>
+            </tr>
+          </table>
+
+          <p>전 세계 170여 나라에서 82개 언어로 번역돼, 2억2천만 부가 넘는 판매고를 기록한 이 시대 가장 사랑받는 작가. 영혼을 뒤흔드는 문장력으로 ‘언어의 연금술사’라고도 불린다.<br>
+            1947년 브라질 리우데자네이루에서 태어나 저널리스트·록스타·극작가·음반회사 중역 등 다양한 일을 하다, 1986년 돌연 떠난 순례로 삶에 커다란 전환점을 맞이한다. 이때의 경험을 바탕으로 첫
+            작품 《순례자》를 썼고, 이듬해 출간한 《연금술사》는 85만 부 판매를 기록하며 세계적 작가의 반열에 오른다. 이후 《브리다》 《베로니카, 죽기로 결심하다》 《피에트라 강가에서 나는 울었네》
+            《악마와 미스 프랭》 《오 자히르》 《포르토벨로의 마녀》 《알레프》 《승자는 혼자다》 《마법의 순간》 《아크라 문서》 《불륜》 《마크툽》 《스파이》 《히피》 등 약 30권의 책을 출간하며 전
+            세계적으로 큰 반향을 일으킨다.
+            2002년 브라질 문학 아카데미 회원으로 선출되었고, 2007년부터 UN 평화대사로 활동 중이며, 2009년 《연금술사》로 ‘한 권의 책이 가장 많은 언어로 번역된 작가’로 기네스북에
+            등재되었다. ‘코엘료 인스티튜트’라는 비영리 단체를 설립해 빈민층 어린이와 노인을 위한 자선사업을 펼치고 있으며, 프랑스 정부로부터 ‘레지옹 도뇌르’ 훈장을 수훈하는 등 여러 차례 국제적인 상을
+            받았다.</p>
+        </div>
+      </div>
+
+      <!--역자 소개-->
+      <div id="translator_intro">
+        <h1>역자 소개</h1>
+
+        <div class="translator_left">
+          <div class="aut_photo"><img src="img/sub_logo.png" alt=""></div>
+          <span class="aut_btn">관심작가 축가 / 신간알림</span><br><br>
+
+          <div class="aut_photo"><img src="img/sub_logo.png" alt=""></div>
+          <span class="aut_btn">관심작가 축가 / 신간알림</span>
+        </div>
+
+        <div class="translator_right">
+          <table>
+            <tr>
+              <th><em>옮긴이</em>&ensp;<a href="#">박태옥</a></th>
+              <th>최근저서</th>
+            </tr>
+            <tr>
+              <td>국적 : 대한민국</td>
+              <td><a href="#">[저서]못난 아빠</a></td>
+            </tr>
+            <tr>
+              <td>분류 : 문학가 아동/청소년 문학가 기타</td>
+              <td><a href="#">[편역]철학자 하일성의 야구 몰라요 인생 몰라요</a></td>
+            </tr>
+            <tr>
+              <td>인기지수 : 64</td>
+            </tr>
+            <tr>
+              <td>반디추천 : 2회선정</td>
+            </tr>
+          </table>
+
+          <p>타고난 재주가 글쓰기라 평생 글과 함께 살았고, 파울로 코엘료의 말처럼 돈 좀 못 벌더라도 꿋꿋이 꿈을 따랐다. 하루하루는 다 다르고 날마다 새롭고 멋진 일이 일어난다는 파울로 코엘료의 말에
+            백 퍼 공감한다. 방송 프로그램 〈KBS 독립영화관〉 작가와 만화 《태일이》 스토리 작가로 활동했으며, 단편영화 〈재떨이〉의 시나리오를 썼다. 그 외에도 에세이 《야산 꼴찌를 일등으로》 《못난
+            아빠》의 말꾸밈, 글꾸밈을 맡아 했다. 지은 책으로는 장편소설 《마담 블루》가 있다.</p><br><br>
+
+          <table>
+            <tr>
+              <th><em>그린이</em>&ensp;<a href="#">윤예지</a></th>
+              <th>최근저서</th>
+            </tr>
+            <tr>
+              <td>국적 : 대한민국</td>
+              <td><a href="#">[일러스트]마당을 나온 암탉</a></td>
+            </tr>
+            <tr>
+              <td>직업 : 일러스트레이터</td>
+              <td><a href="#">[일러스트]농담을 싫어하는 사람들</a></td>
+            </tr>
+            <tr>
+              <td>인기지수 : 250</td>
+              <td><a href="#">[일러스트]귀 큰 토끼의 고민 상담소</a></td>
+            </tr>
+            <tr>
+              <td>반디추천 : 1회선정</td>
+            </tr>
+          </table>
+
+          <p>기억할 수 있는 어릴 때부터 그림을 그렸습니다. 그림 이외의 직업은 상상해본 적이 없기에 일러스트레이터라는 직업으로 돈을 벌고, 그것으로 또 시간과 공간을 확장할 수 있어 행운이라고
+            생각합니다.
+            출판, 포스터, 광고 등 다양한 분야에서 여러 국적의 클라이언트들과 작업하고 있습니다. 오래된 작업으로는 MBC〈라디오스타〉로고 작업이 있고, 최근에는 광고회사 Wieden+Kennedy
+            Amsterdam과 함께 덴마크 에너지 회사 Ørsted의 그린에너지 캠페인을 위한《Is This My Home?》이라는 그림책을 만들었습니다. 그 외에는 《땅콩나라
+            오이제국》《12Lands》등의 그림책을 작업했고,《당신은 나를 열어 바닥까지 휘젓고》 《귀 큰 토끼의 고민 상담소》《농담을 싫어하는 사람들》《마당을 나온 암탉》의 책들에 그림을 그렸습니다.
+            흐르는 것들에 대해 예민한 편입니다. 그래서 일로 그림을 그리지 않는 시간에는 흐르는 것을 기록으로 잡아두는 연습을 합니다. 시시각각 변하는 시간과 감정의 흐름을 잊어버리기 전에 이미지로
+            기록해둡니다.</p>
+        </div>
+      </div>
+
+      <!--저자의 다른 책-->
+      <div id="another_wrap">
+        <h1>저자의 다른 책</h1>
+        <div id="anotherbox_wrap">
+          <div class="another_slide">
+            <ul class="another_box">
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+            </ul>
+            <ul class="another_box">
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+              <li class="notbox"></li>
+            </ul>
+
+            <span id="an_prev" class="prev">〈</span>
+            <span id="an_next" class="next">〉</span>
+          </div>
+        </div>
+      </div>
+
+      <!--목차-->
+      <div id="order">
+        <h1>목차</h1>
+
+        <p>1장 나를 믿고 한 걸음 앞으로<br>
+          2장 오늘의 마음을 소중하게 돌보며<br>
+          3장 나에서 우리가 되는 연습<br>
+          4장 사소한 순간이 쌓이면 멋진 마법이 된다<br><br>
+
+          옮긴이의 말<br>
+          그린이의 말</p>
+      </div>
+
+      <!--책 속에서-->
+      <div id="main_txt">
+        <h1>책 속에서</h1>
+
+        <p>
+          여전히 울고 싶다면 눈물은 닦지 마세요.<br>
+          여전히 알고 싶다면 해답에 만족하지 마세요.<br>
+          ‘아니요’라고 하고 싶은데 ‘네’라고 하지 마세요.<br>
+          ‘가자’라고 하고 싶은데 ‘있자’라고 하지 마세요.<br>
+          _〈감정에 충실하기〉<br><br>
+
+          ●<br>
+          겁먹지 마세요.<br>
+          외로움은 때로 선물이 되기도 합니다.<br>
+          우리에게 살아가는 이유를 찾게 해줍니다.<br>
+          _〈슬픔도 힘이 된다〉<br><br>
+
+          ●<br>
+          불의를 위해 여럿과 함께 있는 것보다<br>
+          정의로운 혼자가 훨씬 낫습니다.<br>
+          _〈혼자라도 좋아〉<br><br>
+
+          ●<br>
+          정말 성공하고 싶다면<br>
+          반드시 기억해야 할 규칙 하나.<br>
+          자기 자신을 속이지 마세요.<br>
+          _〈나에게 진실되게〉<br><br>
+
+          ●<br>
+          딴사람이 되고 싶어서 여행을 떠난다면<br>
+          별로 도움이 되지 않을 겁니다.<br>
+          여행은 진짜 나를 찾아가는 것이니까요.<br>
+          _〈나를 찾아가는 것〉<br><br>
+
+          ●<br>
+          폭풍이 꼭 나쁘지만은 않습니다.<br>
+          때로는 내가 가야 할 길을 말끔히 치워놓기도 합니다.<br>
+          _〈맑은 하늘처럼〉
+        </p>
+      </div>
+
+      <!--이벤트/기획전-->
+      <div id="eventplan">
+        <!--상품정보 메뉴 / 2 이벤트기획전-->
+        <ul class="tapmenu">
+          <li><a href="#together_wrap">책정보</a></li>
+          <li><a href="#eventplan">이벤트/기획전</a></li>
+          <li><a href="#reviews">회원리뷰</a></li>
+          <li><a href="#return">반품/교환</a></li>
+        </ul>
+
+        <div class="eve_bn"><img src="img/sub_event_bn1.jpg" alt=""></div>
+        <div class="eve_bn"><img src="img/sub_event_bn2.jpg" alt=""></div>
+        <div class="eve_bn"><img src="img/sub_event_bn3.jpg" alt=""></div>
+      </div>
+
+      <!--회원리뷰-->
+      <div id="reviews">
+        <!--상품정보 메뉴 / 3 회원리뷰-->
+        <ul class="tapmenu">
+          <li><a href="#together_wrap">책정보</a></li>
+          <li><a href="#eventplan">이벤트/기획전</a></li>
+          <li><a href="#reviews">회원리뷰</a></li>
+          <li><a href="#return">반품/교환</a></li>
+        </ul>
+
+        <h3>리뷰 혜택 및 이용안내</h3>
+        <table class="review_intro">
+          <tr>
+            <td colspan="2">
+              <h2>리뷰 작성하면 반딧불 최대 700개 적립</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">- 일반 리뷰(150자 이상), 우수리뷰(300자 이상), 포토 추가(GIFT, 화장품만 해당)</td>
+          </tr>
+          <tr>
+            <td colspan="2">- 글자 수는 띄어쓰기와 줄 바꿈, 의미없는 특수 문자와 공백을 제외합니다.</td>
+          </tr>
+          <tr>
+            <td>- 3,000원 미만 상품, 사은품, 정기간행물은 리뷰를 작성하셔도 반딧불이 적립되지 않습니다.</td>
+            <td class="btn_more">리뷰 혜택 이용 안내 더 보기 <i class="fas fa-angle-right"></i></td>
+          </tr>
+        </table>
+
+        <!--리뷰 게시판-->
+        <div class="review_wrap">
+          <h1>리뷰 <em>[10]</em></h1>
+          <span>리뷰 혜택 및 이용안내</span>
+
+          <table class="review_table">
+            <tr>
+              <th>평점</th>
+              <th>리뷰 제목</th>
+              <th>글쓴이</th>
+              <th>조회</th>
+              <th>공감</th>
+              <th>작성일</th>
+            </tr>
+            <!--1line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <em><i class="fas fa-leaf"></i></em>
+              </td>
+              <td>내가 빛나는 순간</td>
+              <td>오즐</td>
+              <td>17</td>
+              <td>0</td>
+              <td>2020.06.18</td>
+            </tr>
+            <!--2line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>내가 빛나는 순간 -파울로 코엘료-</td>
+              <td>현동이아빠</td>
+              <td>9</td>
+              <td>0</td>
+              <td>2020.05.18</td>
+            </tr>
+            <!--3line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>내가 존재함으로 이 세상이 존재하는 것 [내가 빛나는 순간]</td>
+              <td>와우우웅</td>
+              <td>12</td>
+              <td>0</td>
+              <td>2020.06.14</td>
+            </tr>
+            <!--4line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>내가 빛나는 순간</td>
+              <td>크렘벨</td>
+              <td>5</td>
+              <td>0</td>
+              <td>2020.05.26</td>
+            </tr>
+            <!--5line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <em><i class="fas fa-leaf"></i></em>
+              </td>
+              <td>지치는 여름, 어른들을 위한 이야기로 추천</td>
+              <td>까망머리앤</td>
+              <td>20</td>
+              <td>3</td>
+              <td>2020.06.12</td>
+            </tr>
+            <!--6line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>내가 빛나는 순간</td>
+              <td>푸른고양이</td>
+              <td>2</td>
+              <td>0</td>
+              <td>2020.05.29</td>
+            </tr>
+            <!--7line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>[에세이] 내가 빛나는 순간</td>
+              <td>두몯</td>
+              <td>3</td>
+              <td>0</td>
+              <td>2020.05.27</td>
+            </tr>
+            <!--8line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>어느 날 당신은 깨닫게 될 것입니다... 더 이상 시간이 없구나.</td>
+              <td>kiyukk</td>
+              <td>8</td>
+              <td>0</td>
+              <td>2020.06.06</td>
+            </tr>
+            <!--9line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <em><i class="fas fa-leaf"></i></em>
+              </td>
+              <td>내가 빛나는 순간</td>
+              <td>소리42</td>
+              <td>2</td>
+              <td>0</td>
+              <td>2020.05.18</td>
+            </tr>
+            <!--10line-->
+            <tr>
+              <td>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+                <i class="fas fa-leaf"></i>
+              </td>
+              <td>오늘, 행복이 선명하게 다가옵니다!!</td>
+              <td>행복해요</td>
+              <td>10</td>
+              <td>1</td>
+              <td>2020.06.19</td>
+            </tr>
+          </table>
+
+          <div class="writing">
+            <p>
+              <i class="fas fa-angle-double-left"></i>&ensp;
+              <i class="fas fa-angle-left"></i>&ensp;
+              1&ensp;
+              <i class="fas fa-angle-right"></i>&ensp;
+              <i class="fas fa-angle-double-right"></i>
+            </p>
+            <button>리뷰쓰기</button>
+          </div>
+        </div>
+
+        <!--간단 평-->
+        <div class="simple">
+          <h1>간단평&ensp;<em>1,000원이상 상품 구매 후 100자 이상 간단평 작성 시 반딧불 100개(100자 미만 20개)를 드립니다.</em></h1>
+          <span>간단평 혜택 및 이용안내</span>
+
+          <textarea name="simpleriview"></textarea>
+          <button>등록</button>
+
+          <table>
+            <tr>
+              <td><img src="img/ico_level_3.gif" alt="">&ensp;카르페디엠</td>
+              <td>잘 받았어요~ 만족합니다!!</td>
+              <td class="like"><i class="fas fa-heart"></i>&ensp;공감하기</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><img src="img/ico_level_5.gif" alt="">&ensp;두목</td>
+              <td>이 얇고, 예쁘디 예쁜 책 속에서 코엘료는 쓱 지나치는 인생에서 가만히 멈춰서 읊조리는 것만으로도 위로가 되는 문장들을 기꺼이 전해주고 있습니다. 언어의 연금술사 다운 빛나는 문장이
+                아닐 수 없달까요. 거기에 감성을 더 풍성하게 만들어주는 일러스트까지 있으니 더 말할 필요가 있을까 싶어요. 한 손에 쏙 들어오는 크기여서 들고 다니지 않을 재간이 없네요. 끝나가는 봄,
+                코엘료의 문장으로 다시 감성 충전됐습니다.？</td>
+              <td class="like"><i class="fas fa-heart"></i>&ensp;공감하기</td>
+              <td>7</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!--반품/교환-->
+      <div id="return">
+        <!--상품정보 메뉴 / 4 반품교환-->
+        <ul class="tapmenu">
+          <li><a href="#together_wrap">책정보</a></li>
+          <li><a href="#eventplan">이벤트/기획전</a></li>
+          <li><a href="#reviews">회원리뷰</a></li>
+          <li><a href="#return">반품/교환</a></li>
+        </ul>
+
+        <h1>반품/교환</h1>
+        <p>상품 설명에 반품/ 교환 관련한 안내가 있는 경우 그 내용을 우선으로 합니다. (업체 사정에 따라 달라질 수 있습니다)</p>
+
+        <table>
+          <tr>
+            <th>반품/교환 방법</th>
+            <td>홈 〉고객센터 〉자주찾는질문 “반품/교환/환불” 안내 참고 또는 1:1상담게시판</td>
+          </tr>
+          <tr>
+            <th>반품/교환 가능 기간</th>
+            <td>반품/교환은 배송완료 후 7일 이내, 상품의 결함 및 계약내용과 다를 경우 문제발견 후 30일 이내에 신청가능</td>
+          </tr>
+          <tr>
+            <th>반품/교환 비용</th>
+            <td>변심 혹은 구매착오의 경우에만 반송료 고객 부담(별도 지정 택배사 없음)</td>
+          </tr>
+          <tr>
+            <th>반품/교환 불가 사유</th>
+            <td>
+              소비자의 책임 사유로 상품 등이 손실 또는 훼손된 경우<br>
+              소비자의 사용, 포장 개봉에 의해 상품 등의 가치가 현저히 감소한 경우 : 예) 화장품, 식품, 가전제품 등<br>
+              복제가 가능한 상품 등의 포장을 훼손한 경우 : 예) 음반/DVD/비디오, 소프트웨어, 만화책, 잡지, 영상 화보집<br>
+              소비자의 요청에 따라 개별적으로 주문 제작되는 상품의 경우 (GIFT주문제작상품)<br>
+              디지털 컨텐츠인 eBook, 오디오북 등을 1회 이상 다운로드를 받았을 경우<br>
+              시간의 경과에 의해 재판매가 곤란한 정도로 가치가 현저히 감소한 경우<br>
+              전자상거래 등에서의 소비자보호에 관한 법률이 정하는 소비자 청약철회 제한 내용에 해당되는 경우<br>
+              해외주문 상품(도서 및 음반)의 경우(파본/훼손/오발송 상품을 제외)<br>
+              중고 상품 등 재고의 추가 확보가 어려운 경우 (교환은 어려우나 반품은 가능)<br>
+              그밖에 월간지, 화보집, 사진집, 그림도감, 시집류, 중고학습서, 카세트테입, 만화, 입시자료, 악보, 지도, 여성실용서적 등(파본/훼손/오발송 상품을 제외)
+            </td>
+          </tr>
+          <tr>
+            <th>소비자 피해보상<br>환불지연에 따른 배상</th>
+            <td>
+              상품의 불량에 의한 반품, 교환, A/S, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자 분쟁해결기준 (공정거래위원회고시)에 준하여 처리됨<br>
+              대금 환불 및 환불지연에 따른 배상금 지급 조건, 절차 등은 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 처리함
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div id="fmenu_wrap">
+        <nav>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">이용약관</a></li>
+            <li><span>|</span></li>
+            <li><a href="#"><em>개인정보 처리방침</em></a></li>
+            <li><span>|</span></li>
+            <li><a href="#">출판사를위한안내</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">광고안내</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">SCM</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">제휴/입점문의</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">오프라인 신규매장 입점제안/프랜차이즈(가맹) 상담</a></li>
+          </ul>
+
+          <a href="#" class="f_sns"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f_sns"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="f_sns"><i class="fab fa-facebook-f"></i></a>
+        </nav>
+      </div>
+
+      <!--footer 회사소개-->
+      <div id="info_wrap">
+        <a href="index.html" class="logo"><img src="img/logo_footer.gif" alt=""></a>
+        <div id="info">
+          <table>
+            <tr style="height: 60px">
+              <td colspan="2">
+                <span style="font-size: 1em; font-weight: 500">고객문의 : 1577-4030</span> (발신자 부담) 평일 9시~18시(토요일,일요일,공휴일
+                휴무) | Fax: 02-720-0073&ensp;
+                <a href="#" class="btn_f">1:1상담하기 ▶</a>
+              </td>
+            </tr>
+            <tr>
+              <td>회사명 : (주)서울문고</td>
+              <td>소재지 : 서울 구로구 디지털로34길 55, B1층 웍앤코 I-6 반디앤루니스</td>
+            </tr>
+            <tr>
+              <td>대표이사 : 김동국</td>
+              <td>사업자 등록번호 : 120-81-02543</td>
+            </tr>
+            <tr>
+              <td>개인정보 관리 책임자 : 이해권</td>
+              <td>통신판매업 신고번호 : 제2021-서울구로-0604호
+                <a href="#" class="point_f">사업자정보확인 ▶</a>
+              </td>
+            </tr>
+            <tr>
+              <td>E-mail : bandi_cs@bnl.co.kr</td>
+              <td>물류센터 : (우 10857) 경기도 파주시 탄현면 오금로50번길 74 (오금리) 반디앤루니스 물류센터
+                <a href="#" class="point_f">안내 ▶</a>
+              </td>
+            </tr>
+            <tr style="height: 60px">
+              <td colspan="2">
+                copyright ⓒ 2016 BANDI＆LUNI'S All Rights Reserved
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+      <!--인증서-->
+      <div id="award_wrap">
+        <div id="award">
+          <img src="img/footer_award.jpg" alt="">
+
+          <div id="award_text">
+            <h6>정보보호관리체계 ISMS 인증 획득</h6>
+            <p>[인증범위] 온라인 쇼핑몰 운영<br>
+              [유효기간] 2021.02.03 ~ 2024.02.02</p>
+            <button>자세히보기 <i class="fas fa-caret-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!--footer end-->
+      <div id="service">
+        <p><span>구매안전 에스크로 서비스</span>&ensp;고객님은 안전거래를 위해 현금으로 결제 시 저희 쇼핑몰에서 가입한 KCP의 구매안전서비스를 이용하실 수 있습니다.&ensp;
+          <a href="#" class="btn_sv">서비스 확인하기 <i class="fas fa-caret-right"></i></a>
+        </p>
+        <button>영상정보관리방침 <i class="fas fa-caret-right"></i></button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+        //수량 증가, 감소
+        var count = 1;
+        var countEl = document.getElementById("countpush");
+
+        function plus() {
+            count++;
+            countEl.value = count;
+        }
+
+        function minus() {
+            if (count > 1) {
+                count--;
+                countEl.value = count;
+            }
+        }
+    </script>
+</body>
+
+</html>

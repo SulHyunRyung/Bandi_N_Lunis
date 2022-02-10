@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bandi & Lunis</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/80a2be1de2.js" crossorigin="anonymous"></script>
+  <script defer src="js/header.js"></script>
+  <script defer src="js/header_slide.js"></script>
+  <script defer src="js/left_add.js"></script>
+  <script defer src="js/section_slide.js"></script>
+  <script defer src="js/today.js"></script>
+  <script defer src="js/expect.js"></script>
+  <script defer src="js/expect_slide.js"></script>
+  <script defer src="js/issue.js"></script>
+  <script defer src="js/issue_slide.js"></script>
+  <script defer src="js/best.js"></script>
+  <script defer src="js/best_slide.js"></script>
+  <script defer src="js/common_b.js"></script>
+  <script defer src="js/common_slide.js"></script>
+  <script defer src="js/rt.js"></script>
+  <script defer src="js/lately.js"></script>
+  <script defer src="js/banner.js"></script>
+  <script defer src="js/event_slide.js"></script>
+  <script defer src="js/story_slide.js"></script>
+  <script defer src="js/main_slide.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <!--heard 시작 배너-->
+      <div id="hd_bn">
+        <div class="remove">
+          <p>×</p>
+        </div>
+      </div>
+
+      <!--버튼, 로그인 메뉴, 검색창-->
+      <div id="hd_wrap">
+        <div id="hd_left">
+          <a href="#" class="btn_hd">책과사람</a>
+          <a href="#" class="btn_hd">모바일앱</a>
+        </div>
+
+        <div id="hd_right">
+          <div id="btn_on" class="btn_lg">
+            <a href="#">바로온OFF</a>
+            <div id="offpop">
+              <h5>바로온 비접속중입니다.</h5>
+              <p>바로온으로 방문하면 구매 시 마다<br>2% 추가 적립 혜택을 받을 수 있습니다.<br>(도서만 구매시 적립 불가)</p>
+              <button>바로온 등록하기</button>
+            </div>
+          </div>
+
+          <a href="#" class="btn_lg">로그인</a>
+
+          <ul id="login">
+            <li><a href="#">회원가입</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">쇼핑카트</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">나의쇼핑 <i class="fas fa-angle-down"></i></a>
+              <ul class="sub_log">
+                <li>나의쇼핑정보</li>
+                <li>주문배송조회</li>
+                <li>적립내역</li>
+                <li>전환금(기프트카드 전환)</li>
+                <li>쿠폰조회</li>
+                <li>구매 히스토리</li>
+                <li>위시리스트</li>
+                <li>반딧불내역</li>
+                <li>회원정보</li>
+                <li>관심작가/신간알림</li>
+              </ul>
+            </li>
+            <li><span>|</span></li>
+            <li><a href="#">나의서재</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+
+        <!--로고, 검색창-->
+        <div id="top">
+          <a href="index.html" class="logo"><img src="img/logo.gif" alt=""></a>
+          <div id="search_wrap">
+            <!--검색창-->
+            <div id="search">
+              <ul id="selbox">
+                <li>통합검색&ensp;&ensp;<i class="fas fa-chevron-down"></i>
+                  <ul class="sel_sub">
+                    <li>통합검색</li>
+                    <li>국내도서</li>
+                    <li>해외주문</li>
+                    <li>음반</li>
+                    <li>DVD</li>
+                    <li>GIFT</li>
+                    <li>오피스문구</li>
+                  </ul>
+                </li>
+              </ul>
+              <input type="text" name="user_id" id="mainsearch" value="<사피엔스>에 도전하는 책!">
+              <button class="btn_sh"><i class="fa fa-search"></i></button>
+            </div>
+            <!--장바구니-->
+            <div id="cart_box">
+              <a href="#"><i id="btn_ct" class="fas fa-shopping-cart"></i></a>
+              <div id="cart">
+                <h5>최근 담긴 상품</h5>
+                <p>쇼핑카트에 담긴 상품이<br> 없습니다.</p>
+                <button>쇼핑카트 바로가기</button>
+              </div>
+            </div>
+            <div id="search_key">
+              <ul>
+                <li><a href="#">히가시노 게이고</a></li>
+                <li>|</li>
+                <li><a href="#">부의도약</a></li>
+                <li>|</li>
+                <li><a href="#">2030 축의 전환</a></li>
+                <li>|</li>
+                <li><a href="#">모두의 주식</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--추천도서 배너-->
+          <a href="#" id="top_bn"><img src="img/top_banner.jpg" alt=""></a>
+        </div>
+      </div>
+
+      <!--메뉴-->
+      <div id="menu_wrap">
+        <nav>
+          <!--메뉴(전체)-->
+          <ul class="menu">
+            <li><a href="#"><i class="fas fa-bars"></i>&ensp;전체</a>
+              <!--sub메뉴 시작-->
+              <div class="sub_wrap">
+                <div class="sub">
+                  <!--sub(전체-도서.키즈샵,수험서)-->
+                  <div class="sub_grid1">
+                    <h5>도서&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li><em>소설</em></li>
+                      <li><em>장르소설</em></li>
+                      <li>시/에세이/기행</li>
+                      <li>청소년교양</li>
+                      <li>경제/경영</li>
+                      <li><em>자기계발</em></li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>유아</li>
+                      <li>육아/자녀교육</li>
+                      <li>어린이</li>
+                      <li>어린이영어</li>
+                      <li>아동전집</li>
+                      <li>정가제 Free</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>가정/생활/요리</li>
+                      <li>건강/의학/미용</li>
+                      <li>여행/취미/레저</li>
+                      <li>잡지</li>
+                      <li>만화</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>인문/교양/철학</em></li>
+                      <li>역사/신화/문화</li>
+                      <li>종교</li>
+                      <li>사회/정치/법률</li>
+                      <li>예술/대중문화</li>
+                      <li>자연과학/공학</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>초등참고서</em></li>
+                      <li><em>중/고등참고서</em></li>
+                      <li><em>외국어/사전</em></li>
+                      <li>대학교재</li>
+                      <li>컴퓨터/IT</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>서양서</li>
+                      <li>일본서</li>
+                    </ul>
+
+                    <h5>키즈샵&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li><em>유아</em></li>
+                      <li>어린이</li>
+                      <li>유아동전집</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>육아/자녀교육</li>
+                      <li>임신/출산/태교</li>
+                      <li>교구완구</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li><em>초등참고서</em></li>
+                      <li>어린이 영어</li>
+                      <li>출산/유아용품</li>
+                    </ul>
+
+                    <h5>수험서&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>공무원</li>
+                      <li>국가고시</li>
+                      <li>임용시험</li>
+                      <li>대·공기업/면접</li>
+                      <li>대표저자수험서</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>국가기술자격증</li>
+                      <li>국가전문자격증</li>
+                      <li>민간전문자격증</li>
+                      <li>외국자격증</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>대학원 편입/진학</li>
+                      <li>공부법/안내서</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-음반)-->
+                  <div class="sub_grid2">
+                    <h5>음반&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>가요</li>
+                      <li>팝</li>
+                      <li>록</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>클래식</li>
+                      <li>국악</li>
+                      <li>월드뮤직</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>재즈</li>
+                      <li>일본음악</li>
+                      <li>OST</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>종교음악</li>
+                      <li>LP</li>
+                      <li>해외구매</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>기타</li>
+                      <li>국내 블루레이</li>
+                      <li>해외구매 영화 DVD</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-기프트)-->
+                  <div class="sub_grid2">
+                    <h5>GIFT&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>디자인문구</li>
+                      <li>오피스/개인</li>
+                      <li>디지털</li>
+                      <li>키덜트/여가</li>
+                      <li>키친/식품</li>
+                    </ul>
+                    <ul class="sub_all">
+                      <li>홈리빙/패브릭</li>
+                      <li>가구/수납</li>
+                      <li>패션/잡화</li>
+                      <li>뷰티</li>
+                      <li>출산/육아</li>
+                      <li>독서용품</li>
+                    </ul>
+                  </div>
+                  <!--sub(전체-오피스문구)-->
+                  <div class="sub_grid2">
+                    <h5>오피스문구&ensp;<span>〉</span></h5>
+                    <ul class="sub_all">
+                      <li>사무용품</li>
+                      <li>복사용지/지류</li>
+                      <li>필기구</li>
+                      <li>학용품/학습준비물</li>
+                      <li>화일바인더</li>
+                      <li>가전제품</li>
+                      <li>사무기기</li>
+                      <li>전산용품</li>
+                      <li>잉크/토너</li>
+                      <li>디자인/화방</li>
+                      <li>생활용품</li>
+                      <li>금고사무용품</li>
+                      <li>산업용품</li>
+                      <li>미용위생</li>
+                      <li>식음료</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="sub.html">도서</a></li>
+            <li><a href="sub.html">eBook</a></li>
+            <li><a href="sub.html">음악</a></li>
+            <li><a href="sub.html">GIFT</a></li>
+            <li><a href="sub.html">오피스문구</a></li>
+            <li><a href="sub.html">키즈</a></li>
+          </ul>
+
+          <ul id="gnb_se_menu">
+            <li><a href="sub.html">베스트셀러</a></li>
+            <li><a href="sub.html">새로나온책</a></li>
+            <li><a href="sub.html">예약판매도서</a></li>
+            <li><a href="sub.html">지금혜택</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--메인 슬라이드-->
+    <div id="slide">
+      <div id="slide_wrap">
+        <ul class="event_sd">
+          <li><a href="sub.html"><img src="img/slide_event1.jpg" alt="slide1"></a></li>
+          <li><a href="sub.html"><img src="img/slide_event2.jpg" alt="slide2"></a></li>
+          <li><a href="sub.html"><img src="img/slide_event3.jpg" alt="slide3"></a></li>
+          <li><a href="sub.html"><img src="img/slide_event4.jpg" alt="slide4"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--슬라이드 tap 메뉴-->
+    <div id="tap_menu_wrap">
+      <div id="tap">
+        <ul class="tap_list">
+          <li>이 달의 이벤트</li>
+          <li>50% OFF~무료</li>
+          <li>추천 이벤트</li>
+          <li>주목 신간</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--서브 슬라이드-->
+    <div id="subslide">
+      <!--화제의 책-->
+      <div class="subbn_wrap" id="hot_page">
+        <ul id="sub_hot" class="sub_sd">
+          <li><a href="sub.html"><img src="img/sub_slide_bn1-2.jpg" alt=""></a></li>
+          <li><a href="sub.html"><img src="img/sub_slide_bn1-3.jpg" alt=""></a></li>
+        </ul>
+        <p>1/2</p>
+        <span id="hot_prev" class="prev">〈</span>
+        <span id="hot_next" class="next">〉</span>
+      </div>
+      <!--금주의 이벤트-->
+      <div class="subbn_wrap">
+        <ul id="sub_eve" class="sub_sd">
+          <li><a href="sub.html"><img src="img/sub_slide_bn2-1.jpg" alt=""></a></li>
+        </ul>
+        <p>1/1</p>
+        <span id="eve_prev" class="prev">〈</span>
+        <span id="eve_next" class="next">〉</span>
+      </div>
+      <!--위클리북-->
+      <div class="subbn_wrap" id="weekly_page">
+        <ul id="sub_week" class="sub_sd">
+          <li><a href="sub.html"><img src="img/sub_slide_bn3-1.jpg" alt=""></a></li>
+          <li><a href="sub.html"><img src="img/sub_slide_bn3-2.jpg" alt=""></a></li>
+        </ul>
+        <p>1/2</p>
+        <span id="wee_prev" class="prev">〈</span>
+        <span id="wee_next" class="next">〉</span>
+      </div>
+    </div>
+
+    <section>
+      <!--사이드 팝업-->
+      <div id="sidepop_wrap">
+        <!--왼쪽 팝업창-->
+        <div id="left_pop">
+          <img src="img/bn_left1.png" alt="" class="lbn">
+          <div id="left_bn">
+            <img src="img/left_pop1.png" alt="">
+            <div class="left_bn_txt">
+              <h3>About 펜벗</h3>
+              <h3>펜벗 큐레이션</h3>
+            </div>
+          </div>
+
+          <ul class="pennav">
+            <li>혜택＆서비스</li>
+            <li>북셀프<button><i class="fas fa-angle-right"></i></button></li>
+            <li>반디e캐시<button><i class="fas fa-angle-right"></i></button></li>
+            <li>기프트카드<button><i class="fas fa-angle-right"></i></button></li>
+            <li>무료배송안내<button><i class="fas fa-angle-right"></i></button></li>
+            <li>서재활동혜택<button><i class="fas fa-angle-right"></i></button></li>
+          </ul>
+
+          <div class="left_sns"><img src="img/left_pop_instar.jpg" alt=""></div>
+          <div class="left_sns"><img src="img/left_pop_%20naver.jpg" alt=""></div>
+        </div>
+
+        <!--오른쪽 팝업창-->
+        <div id="right_pop">
+          <div class="right_bn"><img src="img/right_pop1.jpg" alt=""></div>
+          <div class="right_bn"><img src="img/right_pop2.jpg" alt=""></div>
+
+          <button class="btn_rtp">주요서비스<i class="fas fa-angle-right"></i></button>
+          <button class="btn_rtp">반딧불환전<i class="fas fa-angle-right"></i></button>
+
+          <div class="products">
+            <h5>최근 본 상품</h5>
+
+            <div class="view_pd"><img src="img/right_view1.jpg" alt=""></div>
+            <div class="view_pd"><img src="img/right_view2.jpg" alt=""></div>
+            <p><i class="fas fa-caret-left"></i> 1 / 1 <i class="fas fa-caret-right"></i></p>
+
+            <button class="btn_list">나의쇼핑<i class="fas fa-angle-right"></i></button>
+            <button class="btn_list">위시리스트<i class="fas fa-angle-right"></i></button>
+            <button class="btn_list">구매히스토리<i class="fas fa-angle-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!--오늘의 책-->
+      <div id="today_wrap">
+        <h1 style="width: 670px">오늘의 책</h1>
+        <h1 style="width: 430px">SALE GIFT</h1>
+
+        <div class="today_l">
+          <ul class="todaybox">
+            <li class="edite">
+              <div class="totag"><img src="img/todayTag_edite.jpg" alt=""></div>
+            </li>
+
+            <li class="md">
+              <div class="md_sub">
+                <div class="mdbook"></div>
+                <div class="mdbook"></div>
+              </div>
+              <div class="totag"><img src="img/todayTag_md.jpg" alt=""></div>
+            </li>
+          </ul>
+
+          <span id="to_prev" class="prev">〈</span>
+          <span id="to_next" class="next">〉</span>
+        </div>
+
+
+        <div id="today_r">
+          <ul id="giftbox">
+            <li><img src="img/sale_gift1.jpg" alt=""></li>
+            <li><img src="img/sale_gift2.jpg" alt=""></li>
+            <li><img src="img/sale_gift3.jpg" alt=""></li>
+            <li><img src="img/sale_gift4.jpg" alt=""></li>
+          </ul>
+
+          <span id="gf_prev" class="prev">〈</span>
+          <span id="gf_next" class="next">〉</span>
+        </div>
+      </div>
+
+      <!--기대신간-->
+      <div id="new_wrap">
+        <h1>기대신간</h1>
+
+        <ul id="new_list">
+          <li>전체</li>
+          <li>소설</li>
+          <li>인문/교양/철학</li>
+          <li>시/에세이/기행</li>
+          <li>자기계발</li>
+          <li>여행/취미/레저</li>
+        </ul>
+
+        <div id="new_book">
+          <!--전체-->
+          <div class="new_wrap">
+            <div class="new_slide1">
+              <ul class="new_box1">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box1">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="nb_prev" class="prev">〈</span>
+              <span id="nb_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--소설-->
+          <div class="new_wrap">
+            <div class="new_slide2">
+              <ul class="new_box2">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box2">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="fb_prev" class="prev">〈</span>
+              <span id="fb_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--인문학-->
+          <div class="new_wrap">
+            <div class="new_slide3">
+              <ul class="new_box3">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box3">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="hb_prev" class="prev">〈</span>
+              <span id="hb_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--시/에세이-->
+          <div class="new_wrap">
+            <div class="new_slide4">
+              <ul class="new_box4">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box4">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="eb_prev" class="prev">〈</span>
+              <span id="eb_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--자기계발-->
+          <div class="new_wrap">
+            <div class="new_slide5">
+              <ul class="new_box5">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box5">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="sb_prev" class="prev">〈</span>
+              <span id="sb_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--여행,취미-->
+          <div class="new_wrap">
+            <div class="new_slide6">
+              <ul class="new_box6">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <ul class="new_box6">
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+                <li class="nbox"></li>
+              </ul>
+              <span id="tb_prev" class="prev">〈</span>
+              <span id="tb_next" class="next">〉</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--이슈&북-->
+      <div id="issue_wrap">
+        <h1>이슈＆북</h1>
+        <h2>HAPPY WOMEN'S DAY</h2>
+        <div id="issuebox_wrap">
+          <div class="issue_slide">
+            <ul class="issuebox">
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+            </ul>
+
+            <ul class="issuebox">
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+            </ul>
+
+            <ul class="issuebox">
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+              <li class="issue"></li>
+            </ul>
+
+            <span id="is_prev" class="prev">〈</span>
+            <span id="is_next" class="next">〉</span>
+          </div>
+        </div>
+      </div>
+
+      <!--코너별 아이콘-->
+      <div id="coner_wrap">
+        <a href="#" class="iconbox"><i class="fas fa-mobile-alt"></i><em>sam7.8</em></a>
+        <a href="#" class="iconbox"><i class="fas fa-tags"></i><em>바로e대여</em></a>
+        <a href="#" class="iconbox"><i class="fas fa-coins"></i><em>e캐시 충전</em></a>
+        <a href="#" class="iconbox"><i class="fas fa-check-double"></i>
+          <p><em>세트 특가</em></p>
+        </a>
+        <a href="#" class="iconbox"><i class="fas fa-edit"></i><em>스토리Pick</em></a>
+        <a href="#" class="iconbox"><i class="far fa-gem"></i><em>회원혜택</em></a>
+        <a href="#" class="iconbox"><i class="fas fa-gift"></i><em>선물하기</em></a>
+        <a href="#" class="iconbox"><i class="fas fa-ticket-alt"></i><em>이용권 등록</em></a>
+      </div>
+
+      <!--주제별 베스트-->
+      <div id="theme">
+        <div id="theme_wrap">
+          <div class="vegan_slide">
+            <!--비건-->
+            <ul class="themebox" id="vegan">
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+            </ul>
+
+            <!--아동-->
+            <ul class="themebox" id="kids">
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+            </ul>
+
+            <!--시간여행-->
+            <ul class="themebox" id="time">
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+              <li class="themebook"></li>
+            </ul>
+          </div>
+
+          <span id="tm_prev" class="prev">〈</span>
+          <span id="tm_next" class="next">〉</span>
+        </div>
+
+        <!--베스트셀러-->
+        <div id="bestseller">
+          <h1>베스트셀러</h1>
+
+          <div id="booktap">
+            <div id="list_slide">
+              <!--도서 순위-->
+              <ul class="list">
+                <li><em class="listnum">01</em>&ensp;2030 축의 전환</li>
+                <li><em class="listnum">02</em>&ensp;주린이가 가장 알고 싶은...</li>
+                <li><em class="listnum">03</em>&ensp;주식대학 실전 투자 전략...</li>
+                <li><em class="listnum">04</em>&ensp;달러구트 꿈 백화점</li>
+                <li><em class="listnum">05</em>&ensp;어떻게 말해줘야 할까</li>
+                <li><em class="listnum">06</em>&ensp;공정하다는 착각</li>
+                <li><em class="listnum">07</em>&ensp;평범한 결혼생활</li>
+                <li><em class="listnum">08</em>&ensp;나의 첫 투자 수업 2</li>
+                <li><em class="listnum">09</em>&ensp;빌 게이츠, 기후재앙을...</li>
+                <li><em class="listnum">10</em>&ensp;전설로 떠나는 월가의 영웅</li>
+              </ul>
+              <!--기프트 순위-->
+              <ul class="list">
+                <li><em class="listnum">01</em>&ensp;[스위치 게임] 링 피트...</li>
+                <li><em class="listnum">02</em>&ensp;서천 물총조개 동죽 1kg</li>
+                <li><em class="listnum">03</em>&ensp;WIZ-자스민독서대(고객만...</li>
+                <li><em class="listnum">04</em>&ensp;데일리 골지 페이크삭스(3...</li>
+                <li><em class="listnum">05</em>&ensp;클린32 써클 칫솔(앵커리...</li>
+                <li><em class="listnum">06</em>&ensp;닌텐도] Game＆Wat...</li>
+                <li><em class="listnum">07</em>&ensp;카카오프렌즈 프렌즈스쿨...</li>
+                <li><em class="listnum">08</em>&ensp;양념뚜껑 쉽게 여는 빠른...</li>
+                <li><em class="listnum">09</em>&ensp;루빅스3X3스피드프로</li>
+                <li><em class="listnum">10</em>&ensp;Wiz-클로버독서대(고객만...</li>
+              </ul>
+            </div>
+          </div>
+
+          <span id="tap_b" class="active">도서</span>
+          <span id="tap_g" class="active">GIFT</span>
+
+          <div id="bestbn">
+            <div class="bnbox"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--#키워드 베스트-->
+      <div id="keyword_wrap">
+        <h1>#키워드 BEST</h1>
+        <a href="#" class="btn_key">#멀티미디어 재생</a>
+        <a href="#" class="btn_key">#쿠폰</a>
+        <a href="#" class="btn_key">#매월 BEST 1권 무료</a>
+        <a href="#" class="btn_key">#오디오북</a>
+        <a href="#" class="btn_key">#sam7.8 출시</a>
+      </div>
+
+      <!--일반도서 베스트-->
+      <div id="best_wrap">
+        <h1>일반도서 BEST</h1>
+
+        <ul id="best_list">
+          <li>일간</li>
+          <li>주간</li>
+          <li>월간</li>
+        </ul>
+
+        <div id="best_book">
+          <!--일간 베스트-->
+          <div class="best_wrap">
+            <div class="day_slide">
+              <ul class="daybox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+              <ul class="daybox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+
+              <span id="day_prev" class="prev">〈</span>
+              <span id="day_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--주간 베스트-->
+          <div class="best_wrap">
+            <div class="week_slide">
+              <ul class="weekbox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+              <ul class="weekbox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+
+              <span id="weekly_prev" class="prev">〈</span>
+              <span id="weekly_next" class="next">〉</span>
+            </div>
+          </div>
+          <!--월간 베스트-->
+          <div class="best_wrap">
+            <div class="mon_slide">
+              <ul class="monbox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+              <ul class="monbox">
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+                <li class="bbox"></li>
+              </ul>
+
+              <span id="mon_prev" class="prev">〈</span>
+              <span id="mon_next" class="next">〉</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--펜벗 배너-->
+      <div id="banner">
+        <div class="bn_gbcolor">
+          <div class="bn_wrap"><img src="img/penfriend_banner.png" alt=""></div>
+        </div>
+      </div>
+
+      <!--기프트 이벤트-->
+      <div id="gift">
+        <h1>GIFT EVENT</h1>
+        <span id="top_prev" class="prev">〈</span>
+        <span id="top_next" class="next">〉</span>
+
+        <div class="gift_wrap">
+          <div class="giftimg_slide">
+            <ul class="topbox">
+              <li class="giftbn"><img src="img/gift_t_04.jpg" alt=""></li>
+              <li class="giftbn"><img src="img/gift_t_05.jpg" alt=""></li>
+              <li class="giftbn"><img src="img/gift_t_06.jpg" alt=""></li>
+            </ul>
+            <ul class="topbox">
+              <li class="giftbn"><img src="img/gift_t_01.jpg" alt=""></li>
+              <li class="giftbn"><img src="img/gift_t_02.jpg" alt=""></li>
+              <li class="giftbn"><img src="img/gift_t_03.jpg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="gift_b">
+          <div class="giftprice">
+            <div class="giftimg"><img src="img/gift_b_01.jpg" alt=""></div>
+            <div class="gifttext">
+              <h2>어린 시절 추억의 그 맛</h2>
+              <h5>문방구 간식 아폴로</h5>
+              <h3><em>5,300</em>원</h3>
+            </div>
+          </div>
+
+          <div class="giftprice">
+            <div class="giftimg"><img src="img/gift_b_02.jpg" alt=""></div>
+            <div class="gifttext">
+              <h2>효과적으로 단어를 표현해봐!</h2>
+              <h5>더폰트 스티커</h5>
+              <h3><em>1,900</em>원</h3>
+            </div>
+          </div>
+          <div class="giftprice">
+            <div class="giftimg"><img src="img/gift_b_03.jpg" alt=""></div>
+            <div class="gifttext">
+              <h2>스포티하고 모던한 메탈 시계</h2>
+              <h5>페이토 메쉬 시계</h5>
+              <h3><em>44,000</em>원</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--북스토리-->
+      <div id="story">
+        <div id="story_wrap">
+          <h1>북 스토리</h1>
+          <div class="nomad">
+            <ul class="nd_grid">
+              <li>
+                <img src="img/story_bn_1.jpg" alt="">
+                <div class="nomadtext">
+                  <h5>반갑다, 이 책</h5>
+                  <h3>엄청 우울하진 않지만 우울한 기분</h3>
+                </div>
+              </li>
+              <li>
+                <img src="img/story_bn_2.jpg" alt="">
+                <div class="nomadtext">
+                  <h5>반갑다, 이 책</h5>
+                  <h3>엄청 우울하진 않지만 우울한 기분</h3>
+                </div>
+              </li>
+              <li>
+                <img src="img/story_bn_3.jpg" alt="">
+                <div class="nomadtext">
+                  <h5>반갑다, 이 책</h5>
+                  <h3>엄청 우울하진 않지만 우울한 기분</h3>
+                </div>
+              </li>
+            </ul>
+
+            <span id="nd_prev" class="prev">〈</span>
+            <span id="nd_next" class="next">〉</span>
+          </div>
+
+          <!--사는 이야기-->
+          <div id="memory">
+            <div class="mo_grid">
+              <div class="imgbox_m"><img src="img/memory1.jpg" alt=""></div>
+              <h3>저는 좋아하는데요</h3>
+              <p>[이야기 채집자]<br> 만화책 좋아하세요?</p>
+            </div>
+
+            <div class="mo_grid">
+              <div class="imgbox_m"><img src="img/memory2.jpg" alt=""></div>
+              <h3>어떤 장면을 남기게 될까요</h3>
+              <p>[이야기 채집자]<br> 불편한 만큼 특별해지는 기록</p>
+            </div>
+
+            <div class="mo_grid">
+              <div class="imgbox_m"><img src="img/memory3.jpg" alt=""></div>
+              <h3>12개월 할부의 마음</h3>
+              <p>[이야기 채집자]<br> 1권당 천원</p>
+            </div>
+
+            <div class="mo_grid">
+              <div class="imgbox_m"><img src="img/memory4.jpg" alt=""></div>
+              <h3>다시, 설날이니까</h3>
+              <p>[이야기 채집자]<br> 파괴왕이 되기는 싫습니다.</p>
+            </div>
+          </div>
+
+          <!--베스트 리뷰-->
+          <div id="review">
+            <h2>베스트 리뷰</h2>
+            <p>1/2</p>
+            <span id="rv_prev" class="prev">〈</span>
+            <span id="rv_next" class="next">〉</span>
+
+            <div class="review_grid">
+              <div class="review_slide">
+                <ul class="reviewbox">
+                  <li class="review1">
+                    <img src="img/review_bn1.jpg" alt="">
+                    <h5>이해와 오해가 애매한 것이 삶 :〈우리가 진심으로 엮일 때〉</h5>
+                    <h6>by. 건빵과 별사탕</h6>
+                  </li>
+                  <li class="review1">
+                    <img src="img/review_bn2.jpg" alt="">
+                    <h5>아파트를 발명한 사람 :〈르코르뷔지에〉</h5>
+                    <h6>by. 키치</h6>
+                  </li>
+                  <li class="review1">
+                    <img src="img/review_bn3.jpg" alt="">
+                    <h5>어떤 자리에서든 반드시 해내는 사람들의 공식 :〈일을 잘한다는 것〉</h5>
+                    <h6>by. vory</h6>
+                  </li>
+                  <li class="review1">
+                    <img src="img/review_bn4.jpg" alt="">
+                    <h5>악플에 시달렸을지도 몰라 :〈인스타로 보는 동양고전〉</h5>
+                    <h6>by. kiyukk</h6>
+                  </li>
+                </ul>
+                <ul class="reviewbox">
+                  <li class="review2">
+                    <img src="img/review_bn5.jpg" alt="">
+                    <h5>기대와 설렘을 가득 안은 너에게 :〈오로로〉</h5>
+                    <h6>by. 박찬선</h6>
+                  </li>
+                  <li class="review2">
+                    <img src="img/review_bn6.jpg" alt="">
+                    <h5>돌아보면 다 하나처럼 보인다 :〈어떻게든 읽을 겁니다〉</h5>
+                    <h6>by. 담은</h6>
+                  </li>
+                  <li class="review2">
+                    <img src="img/review_bn7.jpg" alt="">
+                    <h5>깊이를 알 수 없는 감정 :〈새들〉</h5>
+                    <h6>by. sungwook96</h6>
+                  </li>
+                  <li class="review2">
+                    <img src="img/review_bn8.jpg" alt="">
+                    <h5>SF와 사랑에 빠지다 :〈킨〉</h5>
+                    <h6>by. 타자치는 다람쥐</h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--서점에서 만난 사람-->
+          <div id="people">
+            <h2>서점에서 만난 사람</h2>
+            <p>1/2</p>
+            <span id="pp_prev" class="prev">〈</span>
+            <span id="pp_next" class="next">〉</span>
+
+            <div class="people_wrap">
+              <div class="peple_slide">
+                <ul class="ppimgbox">
+                  <li>
+                    <img src="img/people1.jpg" alt="">
+                    <h5>과일을 팔며 계절도 팔고 있습니다.</h5>
+                    <h6>"계절을 파고 있습니다"&ensp;전성배</h6>
+                  </li>
+                  <li>
+                    <img src="img/people2.jpg" alt="">
+                    <h5>느슨한 최선으로 달리는 요조의 세계</h5>
+                    <h6>"남극에서 대한민국까지"</h6>
+                  </li>
+                </ul>
+                <ul class="ppimgbox">
+                  <li>
+                    <img src="img/people3.jpg" alt="">
+                    <h5>남극 여행 스릴러 에세이</h5>
+                    <h6>"계절을 파고 있습니다"&ensp;전성배</h6>
+                  </li>
+                  <li>
+                    <img src="img/people4.jpg" alt="">
+                    <h5>다양한 목소리를 세상에 더 하는일</h5>
+                    <h6>"어떤 엄마 저런 사람직"</h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--펜벗의 이야기-->
+          <div id="penfriend">
+            <h2>펜벗의 책 이야기</h2>
+            <div class="penbnbox"><img src="img/pen_friend.jpg" alt=""></div>
+          </div>
+
+          <!--100인의 큐레이션-->
+          <div id="curation">
+            <h2>100인의 큐레이션 : 내 인생의 책</h2>
+            <p>1/2</p>
+            <span id="cu_prev" class="prev">〈</span>
+            <span id="cu_next" class="next">〉</span>
+
+            <div class="cuwrap_wrap">
+              <div class="cuwrap_slide">
+                <ul class="cuimgbox">
+                  <li>
+                    <img src="img/curator3.jpg" alt="">
+                    <h5>영감을 주는 소설</h5>
+                    <h6>북디자이너 이경란의〈믿을 수 없게 가까운〉</h6>
+                  </li>
+                  <li>
+                    <img src="img/curator4.jpg" alt="">
+                    <h5>꿈 너머의 꿈</h5>
+                    <h6>래퍼 라비의〈언어의 온도〉</h6>
+                  </li>
+                </ul>
+                <ul class="cuimgbox">
+                  <li>
+                    <img src="img/curator1.jpg" alt="">
+                    <h5>결국은 상상력이에요</h5>
+                    <h6>출판평론가 한기호의『신동엽 시전집』</h6>
+                  </li>
+                  <li>
+                    <img src="img/curator2.jpg" alt="">
+                    <h5>'재즈 라이프' 하시길</h5>
+                    <h6>재즈평론가의〈호밀밭의 파수꾼〉</h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--회사 소개-->
+      <div id="bandi_wrap">
+        <h1>반디앤루니스</h1>
+        <div id="bandi">
+          <div id="introduce">
+            <!--브랜드 영상-->
+            <div id="video">
+              <div class="frame"><img src="img/video.jpg" alt=""></div>
+              <h2>반디앤루니스를 읽다</h2>
+              <h6>한 손으로 쉽고 빠르게 모든 혜택을 누려보세요!</h6>
+
+              <p>1/1</p>
+              <span id="in_prev" class="prev">〈</span>
+              <span id="in_next" class="next">〉</span>
+            </div>
+            <!--매장 사진-->
+            <div id="photo">
+              <div class="photo_wrap">
+                <div class="photo_slide">
+                  <ul class="photobox">
+                    <li>
+                      <img src="img/bandi1.jpg" alt="">
+                      <h2>반디앤루니스 신세계강남점</h2>
+                      <h6>강남지역 대표 문화의 관문</h6>
+                    </li>
+                  </ul>
+                  <ul class="photobox">
+                    <li>
+                      <img src="img/bandi2.jpg" alt="">
+                      <h2>반디앤루니스 신세계센텀시티점(부산)</h2>
+                      <h6>배움과 체험이 가득한 멀티컬쳐스토어</h6>
+                    </li>
+                  </ul>
+                  <ul class="photobox">
+                    <li>
+                      <img src="img/bandi3.jpg" alt="">
+                      <h2>반디앤루니스 롯데스타시티점</h2>
+                      <h6>핫플레이스 건대입구의 랜드마크</h6>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>1/3</p>
+              <span id="po_prev" class="prev">〈</span>
+              <span id="po_next" class="next">〉</span>
+            </div>
+          </div>
+
+          <!--공지사항-->
+          <div id="notice">
+            <h2>공지사항</h2>
+            <p>더보기 +</p>
+            <ul>
+              <li>[공지] 북앤라이프 서비스 일시 중지 정상 복구 안내</li>
+              <li>[당첨자발표] 반디책방 이주의 책 130 이벤트 당첨 안내</li>
+              <li>[당첨자발표] 반디책방 이주의 책 133 이벤트 당첨 안내</li>
+              <li>[당첨자발표] 반디책방 이주의 책 131 이벤트 당첨 안내</li>
+              <li>[공지] 네이버페이 플랫폼 지원 환경 변경 안내</li>
+              <li>[당첨자발표] 반디책방 이주의 책 129 이벤트 당첨 안내</li>
+            </ul>
+            <div id="noticbn">
+            </div>
+          </div>
+        </div>
+
+        <!--사이트 내 가이드-->
+        <div id="guide_wrap">
+          <div class="guide">
+            <h5>회원혜택</h5>
+            <ul>
+              <li>온라인멤버십 안내</li>
+              <li>당일배송 안내</li>
+              <li>바로ON 서비스</li>
+              <li>매장영수증 적립금</li>
+              <li>반딧불환전</li>
+            </ul>
+          </div>
+
+          <div class="guide">
+            <h5>편리한 서비스</h5>
+            <ul>
+              <li>추천빅데이터</li>
+              <li>북셀프 서비스</li>
+              <li>반디e캐쉬</li>
+              <li>반디서당</li>
+              <li>반디서당 한자학습 앱</li>
+            </ul>
+            <button class="btn_more">서비스 전체보기 <i class="fas fa-angle-right"></i></button>
+          </div>
+
+          <div class="guide">
+            <h5>제휴할인/적림안내</h5>
+            <p>제휴할인 받고 더욱 저렴하게 구매하세요</p>
+            <button class="btn_more">자세히 <i class="fas fa-angle-right"></i></button>
+            <div class="gdimgbox"><img src="img/card.gif" alt=""></div>
+          </div>
+
+          <div class="guide">
+            <h5>모바일안내</h5>
+            <p>빠르고 편리하게 모바일만의 혜택도 누리세요</p>
+            <button class="btn_more">자세히 <i class="fas fa-angle-right"></i></button>
+            <div class="qrcord"><img src="img/mobile_QR.jpg" alt=""></div>
+          </div>
+
+          <div class="guide">
+            <h5>한자학습 앱</h5>
+            <p>오늘의 한자 알림과 따라쓰기로 한자를 쉽게 익히세요</p>
+            <button class="btn_more">자세히 <i class="fas fa-angle-right"></i></button>
+            <div class="qrcord"><img src="img/QR2.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div id="fmenu_wrap">
+        <nav>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">이용약관</a></li>
+            <li><span>|</span></li>
+            <li><a href="#"><em>개인정보 처리방침</em></a></li>
+            <li><span>|</span></li>
+            <li><a href="#">출판사를위한안내</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">광고안내</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">SCM</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">제휴/입점문의</a></li>
+            <li><span>|</span></li>
+            <li><a href="#">오프라인 신규매장 입점제안/프랜차이즈(가맹) 상담</a></li>
+          </ul>
+
+          <a href="#" class="f_sns"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f_sns"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="f_sns"><i class="fab fa-facebook-f"></i></a>
+        </nav>
+      </div>
+
+      <!--footer 회사소개-->
+      <div id="info_wrap">
+        <a href="index.html" class="logo"><img src="img/logo_footer.gif" alt=""></a>
+        <div id="info">
+          <table>
+            <tr style="height: 60px">
+              <td colspan="2">
+                <span style="font-size: 1em; font-weight: 500">고객문의 : 1577-4030</span> (발신자 부담) 평일 9시~18시(토요일,일요일,공휴일
+                휴무) | Fax: 02-720-0073&ensp;
+                <a href="#" class="btn_f">1:1상담하기 ▶</a>
+              </td>
+            </tr>
+            <tr>
+              <td>회사명 : (주)서울문고</td>
+              <td>소재지 : 서울 구로구 디지털로34길 55, B1층 웍앤코 I-6 반디앤루니스</td>
+            </tr>
+            <tr>
+              <td>대표이사 : 김동국</td>
+              <td>사업자 등록번호 : 120-81-02543</td>
+            </tr>
+            <tr>
+              <td>개인정보 관리 책임자 : 이해권</td>
+              <td>통신판매업 신고번호 : 제2021-서울구로-0604호
+                <a href="#" class="point_f">사업자정보확인 ▶</a>
+              </td>
+            </tr>
+            <tr>
+              <td>E-mail : bandi_cs@bnl.co.kr</td>
+              <td>물류센터 : (우 10857) 경기도 파주시 탄현면 오금로50번길 74 (오금리) 반디앤루니스 물류센터
+                <a href="#" class="point_f">안내 ▶</a>
+              </td>
+            </tr>
+            <tr style="height: 60px">
+              <td colspan="2">
+                copyright ⓒ 2016 BANDI＆LUNI'S All Rights Reserved
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+      <!--인증서-->
+      <div id="award_wrap">
+        <div id="award">
+          <img src="img/footer_award.jpg" alt="">
+
+          <div id="award_text">
+            <h6>정보보호관리체계 ISMS 인증 획득</h6>
+            <p>[인증범위] 온라인 쇼핑몰 운영<br>
+              [유효기간] 2021.02.03 ~ 2024.02.02</p>
+            <button>자세히보기 <i class="fas fa-caret-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!--footer end-->
+      <div id="service">
+        <p><span>구매안전 에스크로 서비스</span>&ensp;고객님은 안전거래를 위해 현금으로 결제 시 저희 쇼핑몰에서 가입한 KCP의 구매안전서비스를 이용하실 수 있습니다.&ensp;
+          <a href="#" class="btn_sv">서비스 확인하기 <i class="fas fa-caret-right"></i></a>
+        </p>
+        <button>영상정보관리방침 <i class="fas fa-caret-right"></i></button>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
